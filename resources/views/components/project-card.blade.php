@@ -1,14 +1,9 @@
-<div class="group w-full h-48 bg-white border cursor-pointer shadow-lg hover:shadow-md transition duration-300 overflow-hidden">
-    <div class="flex flex-col p-4 bg-orange-500 h-full transform translate-y-80 group-hover:translate-y-0 transition duration-300 text-white">
-        <h1 class="text-2xl font-medium">Dienst 1</h1>
-        <p class="opacity-0 group-hover:opacity-100 text-sm mt-2 transition delay-150 duration-300">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <div class="flex grow items-end justify-center">
-            <div class="flex flex-row justify-center items-center px-3 py-2 bg-white hover:bg-gray-100 transition duration-100 rounded-full">
-                <span class="text-black text-xs font-medium">Lees meer</span>
-            </div>
+<div class="group flex aspect-square bg-gray-100 hover:scale-105 hover:bg-orange-500 hover:text-white ransition duration-300 cursor-pointer">
+    <div class="flex flex-col-reverse px-4 py-6 w-full">
+        <div class="flex items-center space-x-2">
+        <span class="text-xl font-medium">Annastraat</span>
+        <div class="font-bold text-xl">&#183;</div>
+        <span class="text-sm text-gray-500 group-hover:text-white transition duration-300">Nieuwbouw</span>
         </div>
     </div>
 </div>
