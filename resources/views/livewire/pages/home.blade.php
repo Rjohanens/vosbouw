@@ -1,4 +1,5 @@
 <div>
+    @section('content')
     <x-navbar />
     <div class="relative isolate">
         <svg class="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
@@ -14,11 +15,13 @@
         </svg>
         <div class="mx-auto max-w-7xl px-6 py-12 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-32">
             <div class="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-                <h1 class="mt-10 max-w-lg text-4xl font-semibold tracking-tight text-orange-500 sm:text-6xl">Bouwen Met Vertrouwen</h1>
+                <h1 class="mt-10 max-w-xl text-4xl font-medium tracking-tight text-orange-500 sm:text-6xl">
+                    De bouwpartner die uw visie realiseert
+                </h1>
                 <p class="mt-6 text-lg leading-8 text-gray-700">Transparantie, betrouwbaarheid en topkwaliteit vormen de kern van onze bouwdiensten, voor een zorgeloos bouwproces. Ons toegewijde team staat altijd klaar om uw vragen te beantwoorden en u door elke stap van het project te begeleiden.</p>
                 <div class="mt-10 flex items-center gap-x-6">
-                    <a href="#" class="rounded-md bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">Offerte aanvragen</a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-700">Contact opnemen <span aria-hidden="true">→</span></a>
+                    <a href="#" class="bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">Offerte aanvragen</a>
+                    <a href="#" class="text-sm font-ligth leading-6 text-gray-700 hover:text-gray-500">Contact opnemen <span aria-hidden="true">→</span></a>
                 </div>
             </div>
             <div class="mt-8 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
@@ -29,7 +32,7 @@
         </div>
     </div>
     <div class="flex flex-col items-center w-full mt-16 -space-x-2">
-        <h1 class="text-4xl font-bold">Recente Projecten</h1>
+        <h1 class="text-4xl font-semibold">Recente Projecten</h1>
         <div class="w-12 h-1 bg-orange-500 mt-4"></div>
     </div>
     <div class="mx-auto max-w-7xl px-6 lg:flex lg:items-center lg:gap-x-10 lg:px-8 py-16">
@@ -42,25 +45,150 @@
             <x-project-card />
         </div>
     </div>
-    <div class="mt-24 bg-gray-950">
-        <div class="grid grid-cols-2 px-16 pt-24">
+    <div class="flex justify-center w-full">
+        <a href="#" class="text-orange-500 hover:text-orange-400 text-sm font-semibold leading-6 mt-8">Bekijk alle projecten <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="mt-24 bg-gray-950 py-24">
+        <div class="grid grid-cols-2 px-16">
             <div class="flex flex-col space-y-16">
                 <div>
-                    <h1 class="text-4xl font-bold text-white">Diensten</h1>
+                    <h1 class="text-4xl font-semibold text-white">Diensten</h1>
                     <div class="w-12 h-1 bg-orange-500 mt-4"></div>
                 </div>
             </div>
-            <div>
-                <p class="text-gray-300 text-sm leading-8">
+            <div class="flex flex-col">
+                <p class="text-gray-100 text-sm leading-8">
                     Bij Vosbouw bieden we een breed scala aan bouwdiensten die voldoen aan de hoogste kwaliteitsnormen. Ons ervaren team is gespecialiseerd in zowel nieuwbouw als renovaties, en levert maatwerkoplossingen die perfect aansluiten bij uw wensen. Van het eerste ontwerp tot de uiteindelijke oplevering, zorgen we voor een soepel en transparant proces.
                 </p>
+                <a href="#" class="text-orange-500 hover:text-orange-400 text-sm font-semibold leading-6 mt-8">Bekijk alle diensten <span aria-hidden="true">→</span></a>
             </div>
         </div>
-        <div class="grid grid-cols-4 w-full gap-8 p-16">
+        <div class="grid grid-cols-4 w-full gap-8 px-16 mt-24">
             <x-service-card />
             <x-service-card />
             <x-service-card />
             <x-service-card />
         </div>
     </div>
+    <div class="flex px-16 my-32">
+        <div class="w-1/2">
+            <div class="flex flex-col max-w-xl">
+                <h1 class="text-4xl font-semibold">
+                    Vraag vrijblijvend een offerte aan voor uw project.
+                </h1>
+                <p class="mt-6 font-light text-gray-700 text-base">
+                    Voor renovatie, aanbouw en zowel grote als kleine projecten, bent u bij ons aan het juiste adres. Stel gerust al uw vragen hier. We staan klaar om u te helpen!
+                </p> 
+                <div class="flex flex-col space-y-4 mt-12">
+                    <div class="flex flex-row items-center gap-x-4">
+                        <svg class="w-5 h-5 text-orange-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M352 192c0-88.4-71.6-160-160-160S32 103.6 32 192c0 15.6 5.4 37 16.6 63.4c10.9 25.9 26.2 54 43.6 82.1c34.1 55.3 74.4 108.2 99.9 140c25.4-31.8 65.8-84.7 99.9-140c17.3-28.1 32.7-56.3 43.6-82.1C346.6 229 352 207.6 352 192zm32 0c0 87.4-117 243-168.3 307.2c-12.3 15.3-35.1 15.3-47.4 0C117 435 0 279.4 0 192C0 86 86 0 192 0S384 86 384 192zm-240 0a48 48 0 1 0 96 0 48 48 0 1 0 -96 0zm48 80a80 80 0 1 1 0-160 80 80 0 1 1 0 160z"/></svg>
+                        <span class="text-gray-700 font-light">Straat 123, 1234 AB Stad</span>
+                    </div>
+                    <div class="flex flex-row items-center gap-x-4">
+                        <svg class="w-5 h-5 text-orange-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M375.8 275.2c-16.4-7-35.4-2.4-46.7 11.4l-33.2 40.6c-46-26.7-84.4-65.1-111.1-111.1L225.3 183c13.8-11.3 18.5-30.3 11.4-46.7l-48-112C181.2 6.7 162.3-3.1 143.6 .9l-112 24C13.2 28.8 0 45.1 0 64c0 0 0 0 0 0C0 300.7 183.5 494.5 416 510.9c4.5 .3 9.1 .6 13.7 .8c0 0 0 0 0 0c0 0 0 0 .1 0c6.1 .2 12.1 .4 18.3 .4c0 0 0 0 0 0c18.9 0 35.2-13.2 39.1-31.6l24-112c4-18.7-5.8-37.6-23.4-45.1l-112-48zM447.7 480C218.1 479.8 32 293.7 32 64c0 0 0 0 0 0s0 0 0 0s0 0 0 0s0 0 0 0s0 0 0 0s0 0 0 0s0 0 0 0s0 0 0 0s0 0 0 0s0 0 0 0s0 0 0 0s0 0 0 0s0 0 0 0s0 0 0 0s0 0 0 0s0 0 0 0s0 0 0 0s0 0 0 0s0 0 0 0s0 0 0 0s0 0 0 0s0 0 0 0s0 0 0 0s0 0 0 0c0-3.8 2.6-7 6.3-7.8l112-24c3.7-.8 7.5 1.2 9 4.7l48 112c1.4 3.3 .5 7.1-2.3 9.3l-40.6 33.2c-12.1 9.9-15.3 27.2-7.4 40.8c29.5 50.9 71.9 93.3 122.7 122.7c13.6 7.9 30.9 4.7 40.8-7.4l33.2-40.6c2.3-2.8 6.1-3.7 9.3-2.3l112 48c3.5 1.5 5.5 5.3 4.7 9l-24 112c-.8 3.7-4.1 6.3-7.8 6.3c-.1 0-.2 0-.3 0z"/></svg>
+                        <span class="text-gray-700 font-light">+ 31(0) 6 123 456 78</span>
+                    </div>
+                    <div class="flex flex-row items-center gap-x-4">
+                        <svg class="w-5 h-5 text-orange-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                        <span class="text-gray-700 font-light">+ 31(0) 6 123 456 78</span>
+                    </div>
+                    <div class="flex flex-row items-center gap-x-4">
+                        <svg class="w-5 h-5 text-orange-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M64 96c-17.7 0-32 14.3-32 32l0 39.9L227.6 311.3c16.9 12.4 39.9 12.4 56.8 0L480 167.9l0-39.9c0-17.7-14.3-32-32-32L64 96zM32 207.6L32 384c0 17.7 14.3 32 32 32l384 0c17.7 0 32-14.3 32-32l0-176.4L303.3 337.1c-28.2 20.6-66.5 20.6-94.6 0L32 207.6zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"/></svg>
+                        <span class="text-gray-700 font-light">info@vosbouw.nl</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-1/2">
+            <div class="grid grid-cols-2 gap-x-4 gap-y-12 content-normal">
+                <div>
+                    <label for="email" class="block text-sm font-normal leading-6 text-gray-900">
+                        Naam <span class="text-orange-500">*</span>
+                    </label>
+                    <div class="mt-2">
+                      <input type="email" name="email" id="email" class="block w-full rounded-md border-0 py-3 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6" placeholder="Jan Jansen">
+                    </div>
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-normal leading-6 text-gray-900">
+                        Email <span class="text-orange-500">*</span>
+                    </label>
+                    <div class="mt-2">
+                      <input type="email" name="email" id="email" class="block w-full rounded-md border-0 py-3 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6" placeholder="janjansen@voorbeeld.nl">
+                    </div>
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-normal leading-6 text-gray-900">
+                        Telefoon <span class="text-orange-500">*</span>
+                    </label>
+                    <div class="mt-2"> 
+                      <input type="email" name="email" id="email" class="block w-full rounded-md border-0 py-3 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6" placeholder="06 123 456 78">
+                    </div>
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-normal leading-6 text-gray-900">Dienst</label>
+                    <div class="mt-2">
+                      <input type="email" name="email" id="email" class="block w-full rounded-md border-0 py-3 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6" placeholder="Dienst">
+                    </div>
+                </div>  
+                <div class="col-span-2">
+                    <label for="email" class="block text-sm font-normal leading-6 text-gray-900">Omschrijving van uw project / vraag</label>
+                    <div class="mt-2">
+                        <textarea rows="4" name="comment" id="comment" class="block w-full rounded-md border-0 py-3 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 placeholder:font-extralight focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-orange-500 sm:text-sm sm:leading-6" placeholder="Beschrijf uw project of vraag"></textarea>
+                    </div>
+                </div> 
+                <div class="col-span-2 relative flex items-start">
+                    <div class="flex h-6 items-center">
+                      <input name="privacy" type="checkbox" class="h-4 w-4 rounded border-gray-100 text-orange-500 focus:ring-orange-500">
+                    </div>
+                    <div class="ml-3 text-sm leading-6">
+                      <span class="text-gray-500 font-extralight">Hierbij geef ik Vos Bouw toestemming om de hierboven door mij ingevulde persoonsgegevens op te slaan met als doel contact met mij op te nemen.*</span>
+                    </div>
+                </div>
+                <a href="#" class=" bg-orange-500 px-4 py-3 w-fit text-sm font-semibold text-white shadow-sm hover:bg-orange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">Versturen</a>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-row justify-between bg-gray-950 px-16 py-24 mt-24">
+        <div class="w-1/2">
+            <h1 class="text-4xl font-semibold text-white mb-1.5">Vos Bouw B.V.</h1>
+            <span class="text-white text-sm tracking-wide">Bouw- en aannemersbedrijf</span>
+        </div>
+        <div class="flex w-1/2">
+            <div class="flex flex-col text-white w-3/5">
+                <span class="font-medium tracking-wider">Contact</span>
+                <div class="flex flex-col space-y-2 mt-4">
+                    <div class="flex flex-row items-center gap-x-4">
+                        <svg class="w-4 h-4 text-orange-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                        <span class="text-white text-sm font-light">Straat 123, 1234 AB Stad</span>
+                    </div>
+                    <div class="flex flex-row items-center gap-x-4">
+                        <svg class="w-4 h-4 text-orange-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                        <span class="text-white text-sm font-light">+ 31(0) 6 123 456 78</span>
+                    </div>
+                    <div class="flex flex-row items-center gap-x-4">
+                        <svg class="w-4 h-4 text-orange-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M92.1 254.6c0 24.9 7 49.2 20.2 70.1l3.1 5-13.3 48.6L152 365.2l4.8 2.9c20.2 12 43.4 18.4 67.1 18.4h.1c72.6 0 133.3-59.1 133.3-131.8c0-35.2-15.2-68.3-40.1-93.2c-25-25-58-38.7-93.2-38.7c-72.7 0-131.8 59.1-131.9 131.8zM274.8 330c-12.6 1.9-22.4 .9-47.5-9.9c-36.8-15.9-61.8-51.5-66.9-58.7c-.4-.6-.7-.9-.8-1.1c-2-2.6-16.2-21.5-16.2-41c0-18.4 9-27.9 13.2-32.3c.3-.3 .5-.5 .7-.8c3.6-4 7.9-5 10.6-5c2.6 0 5.3 0 7.6 .1c.3 0 .5 0 .8 0c2.3 0 5.2 0 8.1 6.8c1.2 2.9 3 7.3 4.9 11.8c3.3 8 6.7 16.3 7.3 17.6c1 2 1.7 4.3 .3 6.9c-3.4 6.8-6.9 10.4-9.3 13c-3.1 3.2-4.5 4.7-2.3 8.6c15.3 26.3 30.6 35.4 53.9 47.1c4 2 6.3 1.7 8.6-1c2.3-2.6 9.9-11.6 12.5-15.5c2.6-4 5.3-3.3 8.9-2s23.1 10.9 27.1 12.9c.8 .4 1.5 .7 2.1 1c2.8 1.4 4.7 2.3 5.5 3.6c.9 1.9 .9 9.9-2.4 19.1c-3.3 9.3-19.1 17.7-26.7 18.8zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM148.1 393.9L64 416l22.5-82.2c-13.9-24-21.2-51.3-21.2-79.3C65.4 167.1 136.5 96 223.9 96c42.4 0 82.2 16.5 112.2 46.5c29.9 30 47.9 69.8 47.9 112.2c0 87.4-72.7 158.5-160.1 158.5c-26.6 0-52.7-6.7-75.8-19.3z"/></svg>
+                        <span class="text-white text-sm font-light">+ 31(0) 6 123 456 78</span>
+                    </div>
+                    <div class="flex flex-row items-center gap-x-4">
+                        <svg class="w-4 h-4 text-orange-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                        <span class="text-white text-sm font-light">info@vosbouw.nl</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col text-white w-2/5">
+                <span class="font-medium tracking-wider">Links</span>
+                <span class="font-light text-sm mt-4">Home</span>
+                <span class="font-light text-sm mt-1.5">Projecten</span>
+                <span class="font-light text-sm mt-1.5">Diensten</span>
+                <span class="font-light text-sm mt-1.5">Over Ons</span>
+            </div>
+        </div>
+    </div>
+    <div class="bg-orange-500 py-4 px-16">
+        <div class="flex justify-between items-center">
+            <span class="text-white text-sm">© {{ now()->format('Y') }} Vos Bouw B.V. Alle rechten voorbehouden.</span>
+        </div>
+    </div>
+    @stop
 </div>
