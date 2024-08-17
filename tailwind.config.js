@@ -6,5 +6,5 @@ export default {
             lato: ["Lato", "sans-serif"],
         },
     },
-    plugins: [],
+    plugins: [require("tailwindcss-animated")],
 };

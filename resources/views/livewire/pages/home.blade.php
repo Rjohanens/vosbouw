@@ -1,38 +1,38 @@
 <div>
     @section('content')
     <x-navbar />
-    <div class="relative isolate">
-        <svg class="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
-            <defs>
-                <pattern id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
-                    <path d="M100 200V.5M.5 .5H200" fill="none" />
-                </pattern>
-            </defs>
-            <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
-                <path d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z" stroke-width="0" />
-            </svg>
-            <rect width="100%" height="100%" stroke-width="0" fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)" />
-        </svg>
-        <div class="mx-auto max-w-7xl px-6 py-12 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-32">
-            <div class="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-                <h1 class="mt-10 max-w-xl text-4xl font-medium tracking-tight text-orange-500 sm:text-6xl">
-                    De bouwpartner die uw visie realiseert
-                </h1>
-                <p class="mt-6 text-lg leading-8 text-gray-700">Transparantie, betrouwbaarheid en topkwaliteit vormen de kern van onze bouwdiensten, voor een zorgeloos bouwproces. Ons toegewijde team staat altijd klaar om uw vragen te beantwoorden en u door elke stap van het project te begeleiden.</p>
-                <div class="mt-10 flex items-center gap-x-6">
-                    <a href="#" class="bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">Offerte aanvragen</a>
-                    <a href="#" class="text-sm font-ligth leading-6 text-gray-700 hover:text-gray-500">Contact opnemen <span aria-hidden="true">→</span></a>
+    <div class="relative isolate bg-stone-100">
+        <div class="py-32 px-32 grid grid-cols-2 w-full">
+            <div class="flex w-full justify-center animate-fade-up animate-once animate-ease-out">
+                <div class="max-w-lg">
+                    <h1 class="mt-10 max-w-xl text-6xl text-stone-900 font-normal tracking-tight">
+                        <span class="flex items-end text-stone-700 font-extralight text-6xl">
+                            Vos Bouw
+                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
+                                <path fill="currentColor" d="M72 352c66.3 0 120-53.7 120-120l0-72 0-32 0-32c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96l0 64c0 35.3 28.7 64 64 64l64 0 0 8c0 30.9-25.1 56-56 56l-8 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l8 0z"/>
+                            </svg>
+                        </span>
+                        Uw bouwpartner in de regio
+                    </h1>
                 </div>
             </div>
-            <div class="mt-8 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
-                <div class="flex justify-end w-full">
-                    <div class="bg-gray-200 aspect-square rounded-lg shadow w-3/4"></div>
+            <div class="mt-4 flex justify-center items-start w-full animate-fade-up animate-ease-out">
+                <div class="flex flex-col max-w-sm">
+                    <p class="mt-6 text-base leading-8 text-stone-700">Transparantie, betrouwbaarheid en topkwaliteit vormen de kern van onze bouwdiensten, voor een zorgeloos bouwproces.</p>
+                    <div class="mt-10 flex items-center gap-x-6">
+                        <x-button>
+                            <div class="flex space-x-2 items-center">
+                                <span>Onze diensten</span>
+                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+                            </div>
+                        </x-button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="flex flex-col items-center w-full mt-16 -space-x-2">
-        <h1 class="text-4xl font-semibold">Recente Projecten</h1>
+    <div class="flex flex-col items-end w-full mt-16 -space-x-2 px-32">
+        <h1 class="text-4xl text-stone-700 font-light">Recente Projecten</h1>
         <div class="w-12 h-1 bg-orange-500 mt-4"></div>
     </div>
     <div class="mx-auto max-w-7xl px-6 lg:flex lg:items-center lg:gap-x-10 lg:px-8 py-16">
@@ -46,7 +46,12 @@
         </div>
     </div>
     <div class="flex justify-center w-full">
-        <a href="#" class="text-orange-500 hover:text-orange-400 text-sm font-semibold leading-6 mt-8">Bekijk alle projecten <span aria-hidden="true">→</span></a>
+        <x-button>
+            <div class="flex space-x-2 items-center">
+                <span>Bekijk alle projecten</span>
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+            </div>
+        </x-button>
     </div>
     <div class="mt-24 bg-gray-950 py-24">
         <div class="grid grid-cols-2 px-16">

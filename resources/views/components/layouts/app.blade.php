@@ -7,7 +7,7 @@
         <title>{{ $title ?? 'Vos Bouw B.V.' }}</title>
         @vite('resources/css/app.css')
     </head>
-    <body>
+    <body class="overflow-x-hidden">
         @yield('content')
     </body>
 </html>
