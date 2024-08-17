@@ -1,0 +1,9 @@
+<div 
+    @class([
+        'flex justify-between p-4 text-lg font-normal text-stone-700 bg-stone-100 hover:bg-stone-200 transition duration-300',
+        'bg-stone-200' => $active
+    ])
+>
+    <span>Dienst</span>
+    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+</div>
