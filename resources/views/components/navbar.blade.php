@@ -5,15 +5,17 @@
   class="fixed z-50 w-full transition duration-500 ease-in-out"
 >
   <nav class="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
-    <div class="flex items-center space-x-4">
-      <img class="h-12 w-auto" src="{{ asset('images/logo.png')}}" alt="">
-      <div class="flex flex-col space-y-0.5">
-          <h1 :class="{ 'text-white': scroll, 'text-stone-700': !scroll }" class="text-stone-700 text-2xl font-medium">
-              Vos Bouw B.V.
-          </h1>
-          <span :class="{ 'text-white': scroll, 'text-stone-700': !scroll }" class="text-stone-700 text-sm">Bouw- en aannemersbedrijf</span>
+    <a href="{{route('home')}}">
+      <div class="flex items-center space-x-4">
+        <img class="h-12 w-auto" src="{{ asset('images/logo.png')}}" alt="">
+        <div class="flex flex-col space-y-0.5">
+            <h1 :class="{ 'text-white': scroll, 'text-stone-700': !scroll }" class="text-stone-700 text-2xl font-medium">
+                Vos Bouw B.V.
+            </h1>
+            <span :class="{ 'text-white': scroll, 'text-stone-700': !scroll }" class="text-stone-700 text-sm">Bouw- en aannemersbedrijf</span>
+        </div>
       </div>
-    </div>
+    </a>
     <div class="flex lg:hidden">
       <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
         <span class="sr-only">Open main menu</span>
@@ -23,8 +25,8 @@
       </button>
     </div>
     <div class="hidden lg:flex lg:gap-x-12 items-center justify-end">
-      <a href="#" :class="{ 'text-white': scroll, 'text-stone-700': !scroll }" class="text-sm leading-6 text-stone-700">Projecten</a>
-      <a href="#" :class="{ 'text-white': scroll, 'text-stone-700': !scroll }" class="text-sm leading-6 text-stone-700">Diensten</a>
+      <a href="{{route('project.index')}}" :class="{ 'text-white': scroll, 'text-stone-700': !scroll }" class="text-sm leading-6 text-stone-700">Projecten</a>
+      <a href="{{route('service.index')}}" :class="{ 'text-white': scroll, 'text-stone-700': !scroll }" class="text-sm leading-6 text-stone-700">Diensten</a>
       <a href="#" :class="{ 'text-white': scroll, 'text-stone-700': !scroll }" class="text-sm leading-6 text-stone-700">Nog iets</a>
       <a href="#" :class="{ 'text-white': scroll, 'text-stone-700': !scroll }" class="text-sm leading-6 text-white">Contact</a>
       <a href="#" class="bg-orange-500 px-4 py-3 rounded-full text-sm font-semibold text-white shadow-sm hover:bg-orange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">Offerte aanvragen</a>
