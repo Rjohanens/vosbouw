@@ -8,6 +8,9 @@
         @vite('resources/css/app.css')
     </head>
     <body class="overflow-x-hidden">
-        @yield('content')
+        <div>
+            <x-navbar />
+            {{ $slot}}
+        </div>
     </body>
 </html>

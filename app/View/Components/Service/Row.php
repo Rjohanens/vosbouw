@@ -12,8 +12,9 @@ class Row extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct($active = false)
+    public function __construct($active)
     {
+        dd($active);
         $this->active = $active;
     }
 

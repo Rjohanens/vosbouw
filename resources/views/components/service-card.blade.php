@@ -17,4 +17,5 @@
     <div class="flex flex-col grow justify-end mt-6">
         <h1 class="text-xl font-ligth">Nieuwbouw</h1>
     </div>
+    {{$active}}
 </div>

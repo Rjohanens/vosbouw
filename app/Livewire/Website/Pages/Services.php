@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Livewire\Pages;
+namespace App\Livewire\Website\Pages;
 
 use Livewire\Attributes\Layout;
 use Livewire\Component;
 
-class Home extends Component
+class Services extends Component
 {
     #[Layout('components.layouts.app')]
     public function render()
     {
-        return view('livewire.pages.home');
+        return view('livewire.website.pages.services');
     }
 }

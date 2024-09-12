@@ -1,6 +1,5 @@
+<x-layouts.app>
 <div>
-    @section('content')
-    <x-navbar />
     <div class="relative isolate bg-stone-100">
         <div class="py-32 px-32 grid grid-cols-2 w-full">
             <div class="flex w-full justify-center animate-fade-up animate-once animate-ease-out">
@@ -53,34 +52,7 @@
             </div>
         </x-button>
     </div>
-    <div class="mt-24 bg-stone-100 py-24">
-        <div class="grid grid-cols-2 px-16">
-            <div class="flex flex-col">
-                <div>
-                    <h1 class="text-4xl text-stone-700 font-light">Onze diensten</h1>
-                    <div class="w-12 h-1 bg-orange-500 mt-4"></div>
-                </div>
-                <div class="flex flex-col divide-y divide-stone-300 mt-6 cursor-pointer">
-                    <x-service.row :active="true" />
-                    <x-service.row />
-                    <x-service.row />
-                    <x-service.row />
-                </div>
-            </div>
-           <div class="flex flex-col pl-16">
-                <div class="w-full bg-stone-300 aspect-video rounded-lg"></div>
-                <p class="mt-6 text-sm leading-8 text-stone-700">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis neque itaque architecto, soluta praesentium nemo obcaecati iure repellendus quaerat aperiam nulla, tempore aliquid ipsum animi vitae laborum, pariatur eum ipsam.
-                </p>
-                <x-button class="mt-8">
-                    <div class="flex space-x-2 items-center">
-                        <span>Lees meer</span>
-                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
-                    </div>
-                </x-button>
-           </div>
-        </div>
-    </div>
+    @include('includes.website.services')
     <div class="flex px-16 my-32">
         <div class="w-1/2">
             <div class="flex flex-col max-w-xl">
@@ -206,5 +178,5 @@
             <span class="text-white text-sm">© {{ now()->format('Y') }} Vos Bouw B.V. Alle rechten voorbehouden.</span>
         </div>
     </div>
-    @stop
 </div>
+</x-layouts.app>
