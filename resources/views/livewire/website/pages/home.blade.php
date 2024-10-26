@@ -1,38 +1,8 @@
 <x-layouts.app>
-<div>
-    <div class="relative isolate bg-stone-100">
-        <div class="py-32 px-32 grid grid-cols-2 w-full">
-            <div class="flex w-full justify-center animate-fade-up animate-once animate-ease-out">
-                <div class="max-w-lg">
-                    <h1 class="mt-10 max-w-xl text-6xl text-stone-900 font-normal tracking-tight">
-                        <span class="flex items-end text-stone-700 font-extralight text-6xl">
-                            Vos Bouw
-                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
-                                <path fill="currentColor" d="M72 352c66.3 0 120-53.7 120-120l0-72 0-32 0-32c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96l0 64c0 35.3 28.7 64 64 64l64 0 0 8c0 30.9-25.1 56-56 56l-8 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l8 0z"/>
-                            </svg>
-                        </span>
-                        Uw bouwpartner in de regio
-                    </h1>
-                </div>
-            </div>
-            <div class="mt-4 flex justify-center items-start w-full animate-fade-up animate-ease-out">
-                <div class="flex flex-col max-w-sm">
-                    <p class="mt-6 text-base leading-8 text-stone-700">Transparantie, betrouwbaarheid en topkwaliteit vormen de kern van onze bouwdiensten, voor een zorgeloos bouwproces.</p>
-                    <div class="mt-10 flex items-center gap-x-6">
-                        <x-button>
-                            <div class="flex space-x-2 items-center">
-                                <span>Onze diensten</span>
-                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
-                            </div>
-                        </x-button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   @include('includes.website.home.hero')
     <div class="flex flex-col items-end w-full mt-16 -space-x-2 px-32">
-        <h1 class="text-4xl text-stone-700 font-light">Recente Projecten</h1>
-        <div class="w-12 h-1 bg-orange-500 mt-4"></div>
+        <h1 class="text-4xl text-zinc-700">Recente Projecten</h1>
+        <div class="w-12 h-1 bg-primary rounded-full mt-4"></div>
     </div>
     <div class="mx-auto max-w-7xl px-6 lg:flex lg:items-center lg:gap-x-10 lg:px-8 py-16">
         <div class="grid grid-cols-3 w-full gap-8">
@@ -52,7 +22,7 @@
             </div>
         </x-button>
     </div>
-    @include('includes.website.services')
+    @include('includes.website.home.services')
     <div class="flex px-16 my-32">
         <div class="w-1/2">
             <div class="flex flex-col max-w-xl">
@@ -138,5 +108,4 @@
         </div>
     </div>
     <x-footer />
-</div>
 </x-layouts.app>

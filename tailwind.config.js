@@ -2,9 +2,15 @@
 export default {
     content: ["./resources/**/*.blade.php", "./resources/**/*.js"],
     theme: {
+        extend: {
+            colors: {
+                primary: "#fc7d14",
+                secondary: "#f8f7fa",
+                dark: "#0f0f10",
+            },
+        },
         fontFamily: {
-            lato: ["Lato", "sans-serif"],
+            rubik: ["Rubik", "sans-serif"],
         },
     },
-    plugins: [require("tailwindcss-animated")],
 };

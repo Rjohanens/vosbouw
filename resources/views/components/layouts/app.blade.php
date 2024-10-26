@@ -7,7 +7,7 @@
         <title>{{ $title ?? 'Vos Bouw B.V.' }}</title>
         @vite('resources/css/app.css')
     </head>
-    <body class="overflow-x-hidden">
+    <body class="overflow-x-hidden font-rubik">
         <div>
             <x-navbar />
             {{ $slot}}

@@ -1,4 +1,4 @@
-<div x-data="{ tabIndex: 0 }" class="mt-24 bg-stone-100 py-24">
+<div x-data="{ tabIndex: 0 }" class="mt-24 bg-secondary py-24">
     <div class="grid grid-cols-2 px-16">
         <div class="flex flex-col">
             <div>
