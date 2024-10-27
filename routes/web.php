@@ -10,12 +10,14 @@ use App\Livewire\Website\Pages\Projects;
 use App\Livewire\Website\Pages\Services;
 use App\Livewire\Website\Pages\ProjectShow;
 use App\Http\Controllers\Auth\AuthController;
+use App\Livewire\Website\Pages\ServiceShow;
 
 Route::get('/', Home::class)->name('home');
 Route::get('/diensten', Services::class)->name('services');
 Route::get('projecten', Projects::class)->name('project.index');
 Route::get('project/{project:slug}', ProjectShow::class)->name('project.show');
 Route::get('service', Services::class)->name('service.index');
+Route::get('service/{service:slug}', ServiceShow::class)->name('service.show');
 
 Route::get('/login', [AuthController::class, 'show'])->name('auth.show');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
