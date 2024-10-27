@@ -18,8 +18,8 @@ class ProjectFactory extends Factory
     {
         return [
             'slug' => $this->faker->slug,
+            'title' => $this->faker->sentence,
             'description' => $this->faker->sentence,
-            'city' => $this->faker->city,
             'execution_date' => $this->faker->dateTimeBetween('now', '+1 year'),
         ];
     }

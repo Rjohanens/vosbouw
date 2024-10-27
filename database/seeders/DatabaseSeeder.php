@@ -20,5 +20,9 @@ class DatabaseSeeder extends Seeder
             'name' => 'Robert Vos',
             'email' => 'admin@vosbouwnoord.nl',
         ]);
+
+        $this->call([
+            ProjectSeeder::class,
+        ]);
     }
 }

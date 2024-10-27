@@ -14,7 +14,7 @@ use App\Http\Controllers\Auth\AuthController;
 Route::get('/', Home::class)->name('home');
 Route::get('/diensten', Services::class)->name('services');
 Route::get('projecten', Projects::class)->name('project.index');
-Route::get('project/{project}', ProjectShow::class)->name('project.show');
+Route::get('project/{project:slug}', ProjectShow::class)->name('project.show');
 Route::get('service', Services::class)->name('service.index');
 
 Route::get('/login', [AuthController::class, 'show'])->name('auth.show');

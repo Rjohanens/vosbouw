@@ -12,7 +12,7 @@
       </div>
     </a>
     <div class="flex gap-x-8 items-center justify-end">
-      <a href="{{route('project.index')}}" class="text-sm text-primary">Home</a>
+      <a href="{{route('home')}}" class="text-sm text-primary">Home</a>
       <a href="{{route('project.index')}}" class="text-sm text-zinc-700 hover:text-primary transition-colors duration-300">Projecten</a>
       <a href="{{route('service.index')}}" class="text-sm text-zinc-700 hover:text-primary transition-colors duration-300">Diensten</a>
       <a href="#" class="text-sm text-zinc-700 hover:text-primary transition-colors duration-300">Nog iets</a>
