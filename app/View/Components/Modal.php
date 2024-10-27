@@ -2,19 +2,17 @@
 
 namespace App\View\Components;
 
-use App\Models\Project;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class ProjectCard extends Component
+class Modal extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct(
-        public Project $project
-    ) {
+    public function __construct()
+    {
         //
     }
 
@@ -23,6 +21,6 @@ class ProjectCard extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.project-card');
+        return view('components.modal');
     }
 }

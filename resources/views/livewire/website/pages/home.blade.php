@@ -6,12 +6,9 @@
     </div>
     <div class="mx-auto max-w-7xl px-6 lg:flex lg:items-center lg:gap-x-10 lg:px-8 py-16">
         <div class="grid grid-cols-3 w-full gap-8">
-            <x-project-card />
-            <x-project-card />
-            <x-project-card />
-            <x-project-card />
-            <x-project-card />
-            <x-project-card />
+            @foreach($this->projects as $project)
+                <x-project-card :project="$project" />
+            @endforeach
         </div>
     </div>
     <div class="flex justify-center w-full">

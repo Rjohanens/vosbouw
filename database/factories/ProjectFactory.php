@@ -17,8 +17,9 @@ class ProjectFactory extends Factory
     public function definition(): array
     {
         return [
+            'slug' => $this->faker->slug,
             'description' => $this->faker->sentence,
-            'town' => $this->faker->city,
+            'city' => $this->faker->city,
             'execution_date' => $this->faker->dateTimeBetween('now', '+1 year'),
         ];
     }
