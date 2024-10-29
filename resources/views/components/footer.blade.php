@@ -1,4 +1,4 @@
-<div class="flex flex-row justify-between bg-gray-950 px-16 py-24 mt-24">
+<div class="flex flex-row justify-between bg-gray-950 px-16 py-24">
     <div class="w-1/2">
         <h1 class="text-4xl font-semibold text-white mb-1.5">Vos Bouw B.V.</h1>
         <span class="text-white text-sm tracking-wide">Bouw- en aannemersbedrijf</span>

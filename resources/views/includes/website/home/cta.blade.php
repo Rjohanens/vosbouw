@@ -1,57 +1,46 @@
-<div class="flex flex-col items-center px-16 my-32">
-    <h1 class="text-4xl text-zinc-700">Neem contact op</h1>
-    <div class="w-full max-w-xl mt-16">
-        <div class="grid grid-cols-2 gap-x-4 gap-y-12 content-normal">
-            <div>
-                <label for="email" class="block text-sm font-normal leading-6 text-gray-900">
-                    Naam <span class="text-orange-500">*</span>
-                </label>
-                <div class="mt-2">
-                  <input type="email" name="email" id="email" class="block w-full rounded-md border-0 py-3 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6" placeholder="Jan Jansen">
-                </div>
+<div class="grid grid-cols-2 gap-x-16 px-16 py-32">
+    <div class="flex flex-col">
+        <h1 class="text-4xl text-zinc-700">Wij staan voor u klaar</h1>
+        <p class="text-sm font-light text-zinc-700 leading-6 mt-6 max-w-lg">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda tempora temporibus at accusantium quos, quidem, quas, voluptates quae quia doloribus.
+        </p>
+        <div class="flex flex-col w-fit rounded-lg space-y-2 mt-6 p-4 bg-secondary">
+            <div class="flex items-center space-x-2">
+                <svg class="w-4 h-4 text-zinc-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                <span class="font-light text-zinc-700 text-sm">Straat 123, 1234 AB Groningen</span>
             </div>
-            <div>
-                <label for="email" class="block text-sm font-normal leading-6 text-gray-900">
-                    Email <span class="text-orange-500">*</span>
-                </label>
-                <div class="mt-2">
-                  <input type="email" name="email" id="email" class="block w-full rounded-md border-0 py-3 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6" placeholder="janjansen@voorbeeld.nl">
-                </div>
+            <div class="flex items-center space-x-2">
+                <svg class="w-4 h-4 text-zinc-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                <span class="font-light text-zinc-700 text-sm">+31 6 123 456 78</span>
             </div>
-            <div>
-                <label for="email" class="block text-sm font-normal leading-6 text-gray-900">
-                    Telefoon <span class="text-orange-500">*</span>
-                </label>
-                <div class="mt-2"> 
-                  <input type="email" name="email" id="email" class="block w-full rounded-md border-0 py-3 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6" placeholder="06 123 456 78">
-                </div>
+            <div class="flex items-center space-x-2">
+                <svg class="w-4 h-4 text-zinc-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                <span class="font-light text-zinc-700 text-sm">info@vosbouwnoord.nl</span>
             </div>
-            <div>
-                <label for="email" class="block text-sm font-normal leading-6 text-gray-900">Dienst</label>
-                <div class="mt-2">
-                  <input type="email" name="email" id="email" class="block w-full rounded-md border-0 py-3 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6" placeholder="Dienst">
+        </div>
+    </div>
+    <div class="flex justify-center">
+        <div class="flex flex-col w-full max-w-lg rounded-lg p-6 bg-secondary">
+            <h1 class="text-2xl">Neem contact op</h1>
+            <p class="text-sm font-light text-zinc-700 leading-6 mt-4">
+                Heeft u een vraag of wilt u een offerte aanvragen? Neem dan contact met ons op. Wij helpen u graag verder.
+            </p>
+            <div class="grid grid-cols-2 gap-4 gap-y-6 mt-8">
+                <div class="flex flex-col space-y-0.5">
+                    <input wire:model.live="form.firstName" type="text" name="firstName" class="block w-full rounded-xl border-0 py-2 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-zinc-200 placeholder:text-zinc-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-zinc-300 sm:text-sm sm:leading-6" placeholder="Voornaam" />  
+                    <span class="text-sm text-red-500 font-light">
+                        @error('form.firstName')
+                            {{ $message }}
+                        @enderror
+                    </span>
                 </div>
-            </div>  
-            <div class="col-span-2">
-                <label for="email" class="block text-sm font-normal leading-6 text-gray-900">Omschrijving van uw project / vraag</label>
-                <div class="mt-2">
-                    <textarea rows="4" name="comment" id="comment" class="block w-full rounded-md border-0 py-3 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 placeholder:font-extralight focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-orange-500 sm:text-sm sm:leading-6" placeholder="Beschrijf uw project of vraag"></textarea>
-                </div>
-            </div> 
-            <div class="col-span-2 relative flex items-start">
-                <div class="flex h-6 items-center">
-                  <input name="privacy" type="checkbox" class="h-4 w-4 rounded border-gray-100 text-orange-500 focus:ring-orange-500">
-                </div>
-                <div class="ml-3 text-sm leading-6">
-                  <span class="text-gray-500 font-extralight">Hierbij geef ik Vos Bouw toestemming om de hierboven door mij ingevulde persoonsgegevens op te slaan met als doel contact met mij op te nemen.*</span>
-                </div>
+                <input wire:model.live="form.lastName" type="text" name="last_name" class="block w-full rounded-xl border-0 py-2 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-zinc-200 placeholder:text-zinc-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-zinc-300 sm:text-sm sm:leading-6" placeholder="Achternaam" />   
+                <input wire:model.live="form.email" type="email" name="email" class="block col-span-2 w-full rounded-xl border-0 py-2 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-zinc-200 placeholder:text-zinc-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-zinc-300 sm:text-sm sm:leading-6" placeholder="E-mailadres" />  
+                <input wire:model.live="form.phone" type="text" name="phone" class="block col-span-2 w-full rounded-xl border-0 py-2 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-zinc-200 placeholder:text-zinc-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-zinc-300 sm:text-sm sm:leading-6" placeholder="Telefoon nr." />    
+                <textarea wire:model.live="form.message" rows="4" name="comment" id="comment" class="block col-span-2 w-full rounded-xl border-0 py-2 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-zinc-200 placeholder:text-zinc-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-zinc-300 sm:text-sm sm:leading-6" placeholder="Beschrijf uw project of vraag"></textarea>
+                <button wire:click="submitContactForm" class="col-span-2 w-full rounded-xl bg-orange-500 text-white py-2 px-4 text-center">Versturen</button>
+                <p class="col-span-2 text-sm text-zinc-400 font-light text-center">Door dit formulier te gebruiken gaat u akkoord met de opslag en verwerking van uw gegevens door deze website.</p>
             </div>
-            <x-button>
-                <div class="flex space-x-2 items-center">
-                    <span>Versturen</span>
-                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
-                </div>
-            </x-button>            
         </div>
     </div>
 </div>
