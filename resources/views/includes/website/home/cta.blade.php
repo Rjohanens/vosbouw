@@ -25,19 +25,54 @@
             <p class="text-sm font-light text-zinc-700 leading-6 mt-4">
                 Heeft u een vraag of wilt u een offerte aanvragen? Neem dan contact met ons op. Wij helpen u graag verder.
             </p>
+                @if (session()->has('success-message'))
+                    <div class="bg-green-200 rounded-md mt-6 py-1 px-4">
+                        <span class="text-green-700 text-sm font-light"> 
+                            {{ session('success-message') }} 
+                        </span>
+                    </div>
+                @endif
             <div class="grid grid-cols-2 gap-4 gap-y-6 mt-8">
                 <div class="flex flex-col space-y-0.5">
-                    <input wire:model.live="form.firstName" type="text" name="firstName" class="block w-full rounded-xl border-0 py-2 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-zinc-200 placeholder:text-zinc-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-zinc-300 sm:text-sm sm:leading-6" placeholder="Voornaam" />  
+                    <input wire:model.live="form.firstName" type="text" name="firstName" class="block w-full rounded-xl border-0 py-2 px-4 text-zinc-700 shadow-sm ring-1 ring-inset ring-zinc-200 placeholder:text-zinc-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-zinc-300 sm:text-sm sm:leading-6" placeholder="Voornaam" />  
                     <span class="text-sm text-red-500 font-light">
                         @error('form.firstName')
                             {{ $message }}
                         @enderror
                     </span>
                 </div>
-                <input wire:model.live="form.lastName" type="text" name="last_name" class="block w-full rounded-xl border-0 py-2 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-zinc-200 placeholder:text-zinc-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-zinc-300 sm:text-sm sm:leading-6" placeholder="Achternaam" />   
-                <input wire:model.live="form.email" type="email" name="email" class="block col-span-2 w-full rounded-xl border-0 py-2 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-zinc-200 placeholder:text-zinc-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-zinc-300 sm:text-sm sm:leading-6" placeholder="E-mailadres" />  
-                <input wire:model.live="form.phone" type="text" name="phone" class="block col-span-2 w-full rounded-xl border-0 py-2 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-zinc-200 placeholder:text-zinc-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-zinc-300 sm:text-sm sm:leading-6" placeholder="Telefoon nr." />    
-                <textarea wire:model.live="form.message" rows="4" name="comment" id="comment" class="block col-span-2 w-full rounded-xl border-0 py-2 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-zinc-200 placeholder:text-zinc-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-zinc-300 sm:text-sm sm:leading-6" placeholder="Beschrijf uw project of vraag"></textarea>
+                <div class="flex flex-col space-y-0.5">
+                    <input wire:model.live="form.lastName" type="text" name="last_name" class="block w-full rounded-xl border-0 py-2 px-4 text-zinc-700 shadow-sm ring-1 ring-inset ring-zinc-200 placeholder:text-zinc-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-zinc-300 sm:text-sm sm:leading-6" placeholder="Achternaam" />   
+                    <span class="text-sm text-red-500 font-light">
+                        @error('form.lastName')
+                            {{ $message }}
+                        @enderror
+                    </span>    
+                </div>
+                <div class="flex flex-col col-span-2 space-y-0.5">
+                    <input wire:model.live="form.email" type="email" name="email" class="block col-span-2 w-full rounded-xl border-0 py-2 px-4 text-zinc-700 shadow-sm ring-1 ring-inset ring-zinc-200 placeholder:text-zinc-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-zinc-300 sm:text-sm sm:leading-6" placeholder="E-mailadres" />  
+                    <span class="text-sm text-red-500 font-light">
+                        @error('form.email')
+                            {{ $message }}
+                        @enderror
+                    </span>  
+                </div>
+                <div class="flex flex-col col-span-2 space-y-0.5">
+                    <input wire:model.live="form.phone" type="text" name="phone" class="block col-span-2 w-full rounded-xl border-0 py-2 px-4 text-zinc-700 shadow-sm ring-1 ring-inset ring-zinc-200 placeholder:text-zinc-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-zinc-300 sm:text-sm sm:leading-6" placeholder="Telefoon nr." />    
+                    <span class="text-sm text-red-500 font-light">
+                        @error('form.phone')
+                            {{ $message }}
+                        @enderror
+                    </span>  
+                </div>
+                <div class="flex flex-col col-span-2 space-y-0.5">
+                    <textarea wire:model.live="form.message" rows="4" name="comment" id="comment" class="block col-span-2 w-full rounded-xl border-0 py-2 px-4 text-zinc-700 shadow-sm ring-1 ring-inset ring-zinc-200 placeholder:text-zinc-400 placeholder:font-extralight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-zinc-300 sm:text-sm sm:leading-6" placeholder="Beschrijf uw project of vraag"></textarea>
+                    <span class="text-sm text-red-500 font-light">
+                        @error('form.message')
+                            {{ $message }}
+                        @enderror
+                    </span>  
+                </div>
                 <button wire:click="submitContactForm" class="col-span-2 w-full rounded-xl bg-orange-500 text-white py-2 px-4 text-center">Versturen</button>
                 <p class="col-span-2 text-sm text-zinc-400 font-light text-center">Door dit formulier te gebruiken gaat u akkoord met de opslag en verwerking van uw gegevens door deze website.</p>
             </div>

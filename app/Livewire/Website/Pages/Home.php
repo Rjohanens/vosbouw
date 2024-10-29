@@ -30,13 +30,24 @@ class Home extends Component
 
     public function submitContactForm()
     {
-        $this->form->validate();
+        $validated = $this->form->validate();
 
         Mail::to('info@vosbouwnoord.nl')
-            ->send(new ContactFormMail($this->form));
+            ->send(
+                new ContactFormMail(
+                    $validated['firstName'],
+                    $validated['lastName'],
+                    $validated['email'],
+                    $validated['phone'],
+                    $validated['message'],
+                )
+            );
 
-        Mail::to($this->form->email)
-            ->send(new ContactConfirmationMail($this->form));
+        session()->flash('success-message', 'Uw bericht is succesvol verzonden!');
+        $this->form->reset();
+
+        // Mail::to($this->form->email)
+        //     ->send(new ContactConfirmationMail($this->form));
     }
 
     #[Layout('components.layouts.app')]
