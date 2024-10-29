@@ -15,70 +15,70 @@ class ProjectSeeder extends Seeder
      */
     public function run(): void
     {
-        $verbouwing = Category::factory()->state([
+        $verbouwing = Category::factory()->create([
             'name' => 'Verbouwing',
         ]);
 
-        $renovatie = Category::factory()->state([
+        $renovatie = Category::factory()->create([
             'name' => 'Renovatie',
         ]);
 
-        $isoleren = Category::factory()->state([
+        $isoleren = Category::factory()->create([
             'name' => 'Isoleren',
         ]);
 
         $bourtange = Project::factory()
-            ->for($verbouwing, 'category')
             ->create([
                 'title' => 'Badkamer verbouwen',
                 'slug' => 'badkamer-bourtange',
                 'description' => 'Een nieuwe badkamer',
                 'execution_date' => '2024-01-01',
+                'category_id' => $verbouwing->id,
             ]);
 
         $bourtange_floor = Project::factory()
-            ->for($verbouwing, 'category')
             ->create([
                 'title' => 'Vloer betegelen',
                 'slug' => 'vloer-bourtange',
                 'description' => 'Een nieuwe vloer',
                 'execution_date' => '2024-01-01',
+                'category_id' => $verbouwing->id,
             ]);
 
         $dakkapel = Project::factory()
-            ->for($renovatie, 'category')
             ->create([
                 'title' => 'Dakkapel plaatsen',
                 'slug' => 'dakkapel-plaatsen',
                 'description' => 'Een nieuwe dakkapel',
                 'execution_date' => '2024-01-01',
+                'category_id' => $renovatie->id,
             ]);
 
         $gevelbekleding = Project::factory()
-            ->for($renovatie, 'category')
             ->create([
                 'title' => 'Gevelbekleding vervangen',
                 'slug' => 'gevelbekleding-vervangen',
                 'description' => 'Een nieuwe gevelbekleding',
                 'execution_date' => '2024-01-01',
+                'category_id' => $renovatie->id,
             ]);
 
         $isolatie = Project::factory()
-            ->for($isoleren, 'category')
             ->create([
                 'title' => 'Isolatie aanbrengen',
                 'slug' => 'isolatie-aanbrengen',
                 'description' => 'Isolatie aanbrengen',
                 'execution_date' => '2024-01-01',
+                'category_id' => $isoleren->id,
             ]);
 
         $kozijnen = Project::factory()
-            ->for($renovatie, 'category')
             ->create([
                 'title' => 'Kozijnen vervangen',
                 'slug' => 'kozijnen-vervangen',
                 'description' => 'Kozijnen vervangen',
                 'execution_date' => '2024-01-01',
+                'category_id' => $renovatie->id,
             ]);
 
         // Add media to the project

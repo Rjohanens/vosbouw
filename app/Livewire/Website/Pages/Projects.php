@@ -4,13 +4,37 @@ namespace App\Livewire\Website\Pages;
 
 use App\Models\Project;
 use Livewire\Component;
+use App\Models\Category;
+use Illuminate\Support\Str;
 use Livewire\Attributes\Layout;
+use Livewire\Attributes\Computed;
 
 class Projects extends Component
 {
-    public function showProject(Project $project)
+    public string $filter = '';
+
+    public function setFilter(string $filter)
     {
-        return redirect()->route('project.show', $project);
+        $this->filter = Str::lower($filter);
+    }
+
+    public function clearFilter()
+    {
+        $this->filter = '';
+    }
+
+    #[Computed]
+    public function projects()
+    {
+        return Project::with('category')
+            ->when($this->filter, fn($query) => $query->whereRelation('category', 'name', $this->filter))
+            ->get();
+    }
+
+    #[Computed]
+    public function categories()
+    {
+        return Category::all();
     }
 
     #[Layout('components.layouts.app')]
