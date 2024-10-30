@@ -22,4 +22,4 @@ jobs:
         SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
         SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
       run: |
-        sshpass -p $SFTP_PASSWORD rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" ./ $SFTP_USERNAME@$SFTP_HOST:/prod
+        sshpass -p $SFTP_PASSWORD rsync -vz --delete -e "ssh -o StrictHostKeyChecking=no" ./ $SFTP_USERNAME@$SFTP_HOST:/prod
