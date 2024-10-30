@@ -1,0 +1,25 @@
+name: Auto-deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install sshpass and rsync
+      run: sudo apt-get install sshpass rsync
+
+    - name: Sync files to Strato
+      env:
+        SFTP_HOST: ${{ secrets.SFTP_HOST }}
+        SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+        SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+      run: |
+        sshpass -p $SFTP_PASSWORD rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" ./ $SFTP_USERNAME@$SFTP_HOST:/prod
