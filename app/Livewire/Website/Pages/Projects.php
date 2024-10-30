@@ -8,9 +8,12 @@ use App\Models\Category;
 use Illuminate\Support\Str;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Computed;
+use Livewire\WithPagination;
 
 class Projects extends Component
 {
+    use WithPagination;
+
     public string $filter = '';
 
     public function setFilter(string $filter)
@@ -28,7 +31,7 @@ class Projects extends Component
     {
         return Project::with('category')
             ->when($this->filter, fn($query) => $query->whereRelation('category', 'name', $this->filter))
-            ->get();
+            ->paginate(9);
     }
 
     #[Computed]

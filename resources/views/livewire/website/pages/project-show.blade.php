@@ -5,7 +5,7 @@
                 {{ $project->title }}
             </h1>
             <div class="flex items-center space-x-4 mt-4">
-                <span class="text-zinc-700 font-light">
+                <span class="text-zinc-700 text-sm font-light">
                     {{ $project->execution_date->format('M d, Y') }}
                 </span>
                 <svg viewBox="0 0 2 2" class="-ml-0.5 h-0.5 w-0.5 flex-none fill-zinc-700">

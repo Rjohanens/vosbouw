@@ -15,7 +15,7 @@
       <a href="{{route('home')}}" class="text-sm hover:text-primary transition-colors duration-300 @if(Str::startswith($activeRouteName, 'home')) text-primary @else text-zinc-700 @endif">Home</a>
       <a href="{{route('project.index')}}" class="text-sm hover:text-primary transition-colors duration-300 @if(Str::startswith($activeRouteName, 'project')) text-primary @else text-zinc-700 @endif">Projecten</a>
       <a href="{{route('service.index')}}" class="text-sm hover:text-primary transition-colors duration-300 @if(Str::startswith($activeRouteName, 'service')) text-primary @else text-zinc-700 @endif">Diensten</a>
-      <a href="#" class="text-sm hover:text-primary transition-colors duration-300 @if(Str::startswith($activeRouteName, 'about')) text-primary @else text-zinc-700 @endif">Nog iets</a>
+      <a href="#" class="text-sm hover:text-primary transition-colors duration-300 @if(Str::startswith($activeRouteName, 'about')) text-primary @else text-zinc-700 @endif">Over ons</a>
       <a href="#" class="text-sm hover:text-primary transition-colors duration-300 @if(Str::startswith($activeRouteName, 'contact')) text-primary @else text-zinc-700 @endif">Contact</a>
     </div>
     <a href="#" class="bg-dark px-4 py-3 rounded-lg text-sm text-white shadow-sm hover:bg-orange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">Offerte aanvragen</a>

@@ -17,4 +17,7 @@
             <x-project-card :project="$project" />
         @endforeach
     </div>
+    <div class="mt-8">
+        {{ $this->projects->links() }}
+    </div>
 </div>

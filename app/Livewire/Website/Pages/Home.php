@@ -43,11 +43,12 @@ class Home extends Component
                 )
             );
 
+        Mail::to($this->form->email)
+            ->hea
+            ->send(new ContactConfirmationMail());
+
         session()->flash('success-message', 'Uw bericht is succesvol verzonden!');
         $this->form->reset();
-
-        // Mail::to($this->form->email)
-        //     ->send(new ContactConfirmationMail($this->form));
     }
 
     #[Layout('components.layouts.app')]

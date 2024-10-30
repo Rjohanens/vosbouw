@@ -27,7 +27,7 @@ class ContactConfirmationMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Contact Confirmation Mail',
+            subject: 'Bevestiging contactaanvraag Vos Bouw',
         );
     }
 
@@ -37,7 +37,7 @@ class ContactConfirmationMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            markdown: 'emails.contact-confirmation-mail',
         );
     }
 
