@@ -13,8 +13,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Install sshpass and rsync
-      run: sudo apt-get install sshpass rsync
+    - name: Install lftp
+      run: sudo apt-get install lftp
 
     - name: Sync files to Strato
       env:
@@ -22,4 +22,7 @@ jobs:
         SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
         SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
       run: |
-        sshpass -p $SFTP_PASSWORD rsync -vz --delete -r -e "ssh -o StrictHostKeyChecking=no" ./ $SFTP_USERNAME@$SFTP_HOST:/prod
+        lftp -u $SFTP_USERNAME,$SFTP_PASSWORD sftp://$SFTP_HOST <<EOF
+        mirror -R ./ /prod
+        bye
+        EOF
