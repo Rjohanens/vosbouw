@@ -15,6 +15,10 @@ jobs:
 
     - name: Install lftp
       run: sudo apt-get install lftp
+    - name: Add SSH key to known hosts
+      run: |
+        mkdir -p ~/.ssh
+        echo "$SFTP_HOSTKEY" >> ~/.ssh/known_hosts
 
     - name: Sync files to Strato
       env:
