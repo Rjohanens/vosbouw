@@ -10,7 +10,7 @@
     <body class="overflow-x-hidden font-rubik scroll-smooth">
         <div>
             <x-navbar></x-navbar>
-            {{ $slot}}
+                {{ $slot}}
             <x-footer></x-footer>
         </div>
     </body>
