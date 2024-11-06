@@ -1,14 +1,14 @@
-<div class="grid grid-cols-2 gap-x-16 px-16 py-32" id="contact">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-0 lg:gap-x-16 px-8 lg:px-16 py-8 lg:py-32" id="contact">
     <div class="flex flex-col">
-        <h1 class="text-4xl text-zinc-700">Waar <span class="text-primary font-medium">Vos Bouw</span> voor staat</h1>
-        <p class="text-sm font-light text-zinc-700 leading-6 mt-6 max-w-lg">
+        <h1 class="text-4xl text-zinc-700 text-center lg:text-start">Waar <span class="text-primary font-medium">Vos Bouw</span> voor staat</h1>
+        <p class="text-sm font-light text-zinc-700 leading-6 mt-8 max-w-lg">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda tempora temporibus at accusantium quos, quidem, quas, voluptates quae quia doloribus.
         </p>
-        <div class="flex flex-col space-y-4 mt-16 font-light text-sm text-zinc-700">
+        <div class="flex flex-col items-start space-y-4 mt-8 lg:mt-16 font-light text-sm text-zinc-700">
             <span>info@vosbouwnoord.nl</span>
             <span>+31 6 123 456 78</span>
         </div>
-        <div class="grid grid-cols-3 gap-x-8 mt-16">
+        <div class="grid grid-cols-3 gap-x-8 mt-8 lg:mt-16">
            <div class="flex flex-col space-y-2">
                <h1 class="text-base">Kwaliteit</h1>
                <span class="text-xs font-light text-zinc-700 leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit voluptatem </span>
@@ -23,7 +23,7 @@
             </div>
         </div>
     </div>
-    <div class="flex justify-center">
+    <div class="flex justify-center mt-8 lg:mt-0">
         <div class="flex flex-col w-full max-w-lg rounded-lg p-6 bg-secondary">
             <h1 class="text-3xl">Neem contact op</h1>
             <p class="text-sm font-light text-zinc-700 leading-6 mt-4">

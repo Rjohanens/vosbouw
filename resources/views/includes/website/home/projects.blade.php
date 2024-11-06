@@ -1,11 +1,17 @@
-<div class="flex flex-col items-end w-full mt-16 -space-x-2 px-32">
-    <h1 class="text-4xl text-zinc-700">Recente Projecten</h1>
+<div class="flex flex-col items-center lg:items-end w-full mt-8 lg:mt-16 -space-x-2 px-8 lg:px-32">
+    <h1 class="text-3xl lg:text-4xl text-zinc-700">Recente Projecten</h1>
     <div class="w-12 h-1 bg-primary rounded-full mt-4"></div>
 </div>
-<div class="mx-auto max-w-7xl px-6 lg:flex lg:items-center lg:gap-x-10 lg:px-8 py-16">
-    <div class="grid grid-cols-3 w-full gap-8">
+<div class="mx-auto max-w-7xl px-6 lg:flex lg:items-center lg:gap-x-10 lg:px-8 py-8 lg:py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-3 w-full gap-4 lg:gap-8">
         @foreach($this->projects as $project)
-            <x-project-card :project="$project" />
+            @if($loop->iteration > 4)
+                <div class="hidden lg:block">
+                    <x-project-card :project="$project" />
+                </div>
+            @else
+                <x-project-card :project="$project" />
+            @endif
         @endforeach
     </div>
 </div>

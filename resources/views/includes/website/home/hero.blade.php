@@ -1,6 +1,6 @@
-<div class="grid grid-cols-2 gap-x-16 w-full pt-32 pb-24 pl-32 bg-secondary h-screen">
-    <div class="flex flex-col w-full justify-start items-start mt-8">
-        <h1 class="text-6xl text-zinc-700 font-light tracking-tight">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-0 lg:gap-x-16 w-full pt-16 lg:pt-32 pb-8 lg:pb-24 px-8 lg:pl-32 bg-secondary h-full lg:h-screen">
+    <div class="flex flex-col w-full items-center lg:justify-start lg:items-start mt-8">
+        <h1 class="text-5xl lg:text-6xl text-zinc-700 font-light tracking-tight">
             Uw
             <span class="text-primary font-normal">
                 bouwpartner
@@ -10,7 +10,7 @@
         <p class="mt-8 text-base leading-8 text-zinc-700 font-light">
             Vos Bouw B.V. is een bouw- en aannemersbedrijf dat zich richt op nieuwbouw, verbouw, renovatie en onderhoud van woningen en bedrijfspanden. Wij zijn gevestigd in de regio en werken met een team van ervaren vakmensen. Wij staan voor kwaliteit, vakmanschap en betrouwbaarheid.
         </p>
-        <div class="mt-10 flex items-center gap-x-6">
+        <div class="mt-10 flex items-center gap-x-4 lg:gap-x-6">
             <button type="button" class="bg-primary rounded-md text-white w-fit px-4 py-3 text-sm font-medium shadow-sm hover:bg-orange-500 hover:border-orange-500 hover:text-white transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">
                 <div class="flex space-x-2 items-center">
                     <span>Neem contact op</span>
@@ -23,7 +23,7 @@
             </a>
         </div>
     </div>
-    <div class="w-screen overflow-hidden bg-dark rounded-l-3xl shadow-xl mt-8">
+    <div class="hidden lg:flex w-screen overflow-hidden bg-dark rounded-l-3xl shadow-xl mt-8">
         <img src="{{ asset('images/hero.jpg') }}" alt="Vos Bouw B.V." class="object-cover w-full h-full rounded-tl-xl hover:scale-105 transition duration-500">
     </div>
 </div>

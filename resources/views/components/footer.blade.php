@@ -1,9 +1,9 @@
-<div class="flex flex-row justify-between bg-gray-950 px-16 py-24">
-    <div class="w-1/2">
+<div class="grid gird-cols-1 lg:grid-cols-4  bg-gray-950 px-16 py-24">
+    <div class="col-span-2">
         <h1 class="text-4xl font-semibold text-white mb-1.5">Vos Bouw B.V.</h1>
         <span class="text-white text-sm tracking-wide">Bouw- en aannemersbedrijf</span>
     </div>
-    <div class="flex w-1/2">
+    <div class="col-span-2 grid grid-col-1 lg:grid-cols-2 mt-12 lg:mt-0">
         <div class="flex flex-col text-white w-3/5">
             <span class="font-medium tracking-wider">Contact</span>
             <div class="flex flex-col space-y-2 mt-4">
@@ -25,7 +25,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-col text-white w-2/5">
+        <div class="flex flex-col text-white mt-12 lg:mt-0">
             <span class="font-medium tracking-wider">Links</span>
             <span class="font-light text-sm mt-4">Home</span>
             <span class="font-light text-sm mt-1.5">Projecten</span>
