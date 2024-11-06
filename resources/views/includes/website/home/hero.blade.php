@@ -22,7 +22,7 @@
             </a>
         </div>
     </div>
-    <div class="hidden lg:flex w-screen overflow-hidden bg-dark rounded-l-3xl shadow-xl mt-8">
-        <img src="{{ asset('images/hero.jpg') }}" alt="Vos Bouw B.V." class="object-cover w-full h-full rounded-tl-xl hover:scale-105 transition duration-500">
+    <div class="relative isolate hidden lg:flex w-screen overflow-hidden bg-dark rounded-l-3xl shadow-xl mt-8">
+        <img src="{{ asset('images/hero.jpg') }}" alt="Vos Bouw B.V." class="inset-0 object-cover w-full h-full">
     </div>
 </div>

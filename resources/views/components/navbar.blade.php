@@ -17,7 +17,7 @@
       <a href="{{route('service.index')}}" class="text-sm hover:text-primary transition-colors duration-300 @if(Str::startswith($activeRouteName, 'service')) text-primary @else text-zinc-700 @endif">Diensten</a>      
       <a href="#contact" class="text-sm hover:text-primary transition-colors duration-300 @if(Str::startswith($activeRouteName, 'contact')) text-primary @else text-zinc-700 @endif">Contact</a>
     </div>
-    <a href="#contact" class="bg-dark px-4 py-3 rounded-lg text-sm text-white shadow-sm hover:bg-orange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">Offerte aanvragen</a>
+    <a href="#contact" class="bg-dark px-4 py-3 rounded-lg text-sm text-white shadow-sm hover:bg-primary transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">Offerte aanvragen</a>
   </nav>
   <!-- mobile menu -->
   <nav x-data="{open: false}" class="lg:hidden flex items-center justify-between px-4 py-2">
