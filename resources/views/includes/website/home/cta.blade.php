@@ -1,5 +1,5 @@
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-0 lg:gap-x-16 px-4 lg:px-16 py-8 lg:py-32" id="contact">
-    <div class="flex flex-col">
+    <div class="flex flex-col px-8">
         <h1 class="text-4xl text-zinc-700 text-center lg:text-start">Waar <span class="text-primary font-medium">Vos Bouw</span> voor staat</h1>
         <p class="text-sm font-light text-zinc-700 leading-6 mt-8 max-w-lg">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda tempora temporibus at accusantium quos, quidem, quas, voluptates quae quia doloribus.
