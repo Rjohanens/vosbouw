@@ -1,4 +1,4 @@
-<div class="grid grid-cols-2 gap-x-16 w-full pt-32 pb-24 pl-32 bg-secondary h-screen">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-0 lg:gap-x-16 w-full pt-24 lg:pt-32 pb-24 px-8 lg:pl-32 bg-secondary h-screen">
     <div class="flex flex-col w-full justify-start items-start mt-8">
         <h1 class="text-6xl text-zinc-700 font-light tracking-tight">
             {{ $service->name }}
@@ -7,7 +7,7 @@
         <p class="mt-8 text-base leading-8 text-zinc-700 font-light">
             {{ $service->description }}
         </p>
-        <div class="mt-10 flex items-center gap-x-6">
+        <div class="mt-8 lg:mt-10 flex items-center gap-x-6">
             <button type="button" class="bg-primary rounded-md text-white w-fit px-4 py-3 text-sm font-medium shadow-sm hover:bg-orange-500 hover:border-orange-500 hover:text-white transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">
                 <div class="flex space-x-2 items-center">
                     <span>Neem contact op</span>
@@ -17,11 +17,11 @@
         </div>
     </div>
     <div>
-        <div class="flex flex-col w-full items-center">
-            <div class="w-96 aspect-square bg-zinc-300 rounded-lg">
+        <div class="flex flex-col w-full items-start lg:items-center">
+            <div class="w-full lg:w-96 aspect-square bg-zinc-300 rounded-lg">
                 <img src="{{ $service->thumbnail()?->getUrl() }}" alt="{{ $service->name }}" class="object-cover w-full h-full rounded-lg">
             </div>
-            <div class="flex justify-between w-96 gap-x-2 mt-4">
+            <div class="flex justify-between w-full lg:w-96 gap-x-2 mt-4">
                 @forelse ($service->getMedia() as $image)
                     <div class="w-20 aspect-square bg-zinc-200 rounded-lg">
                         <img src="{{ $image->getUrl() }}" alt="{{ $service->name }}" class="object-cover w-full h-full rounded-lg">
