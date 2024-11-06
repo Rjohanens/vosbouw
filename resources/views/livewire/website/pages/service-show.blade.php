@@ -1,4 +1,4 @@
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-0 lg:gap-x-16 w-full pt-24 lg:pt-32 pb-24 px-8 lg:pl-32 bg-secondary h-screen">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-0 lg:gap-x-16 w-full pt-24 lg:pt-32 mb-16 lg:mb-0 pb-8 lg:pb-24 px-8 lg:pl-32 bg-secondary h-screen">
     <div class="flex flex-col w-full justify-start items-start mt-8">
         <h1 class="text-6xl text-zinc-700 font-light tracking-tight">
             {{ $service->name }}
