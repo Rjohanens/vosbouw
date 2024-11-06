@@ -1,9 +1,9 @@
-<div class="px-32 py-32">
+<div class="px-8 lg:px-32 py-24 lg:py-32">
     <h1 class="text-4xl text-zinc-700">Projecten</h1>
     <div class="w-12 h-1 bg-primary rounded-full mt-4"></div> 
     <div class="flex items-center w-full space-x-4 mt-16">
-        <span class="text-sm text-zinc-500">Filter op:</span>
-        <div wire:click="clearFilter" class="px-2 rounded-full hover:bg-orange-500 hover:text-white transition duration-300 cursor-pointer @if($filter === '') bg-primary text-white @else bg-zinc-200 text-zinc-700 @endif">
+        <span class="text-sm text-zinc-500 text-nowrap">Filter op:</span>
+        <div wire:click="clearFilter" class="px-2 text-nowrap rounded-full hover:bg-orange-500 hover:text-white transition duration-300 cursor-pointer @if($filter === '') bg-primary text-white @else bg-zinc-200 text-zinc-700 @endif">
             <span class="text-xs">Alle projecten</span>
         </div>
         @foreach($this->categories as $category)
@@ -12,7 +12,7 @@
             </div>
         @endforeach
     </div>
-    <div class="grid grid-cols-3 w-full gap-8 mt-6">
+    <div class="grid grid-cols-1 lg:grid-cols-3 w-full gap-8 mt-6">
         @foreach($this->projects as $project)
             <x-project-card :project="$project" />
         @endforeach
