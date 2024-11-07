@@ -3,10 +3,11 @@
 namespace App\Models;
 
 use App\Models\Category;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Str;
 use Spatie\MediaLibrary\HasMedia;
+use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class Project extends Model implements HasMedia
@@ -18,12 +19,23 @@ class Project extends Model implements HasMedia
         'description',
         'execution_date',
         'category_id',
-        'slug'
+        'slug',
+        'featured',
+        'draft',
     ];
 
     protected $casts = [
         'execution_date' => 'datetime',
+        'featured' => 'boolean',
+        'draft' => 'boolean',
     ];
+
+    public static function booted()
+    {
+        static::creating(function ($project) {
+            $project->slug = Str::slug($project->title);
+        });
+    }
 
     public function category()
     {
