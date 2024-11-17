@@ -1,7 +1,7 @@
 <div class="flex lg:h-screen bg-secondary pb-16 lg:pb-0 px-8 lg:px-0">
     <div class="flex w-full lg:w-1/2 mt-32 lg:mt-52">
         <div class="flex flex-col w-full max-w-2xl lg:pl-24">
-            <h1 class="text-pretty text-4xl lg:text-5xl leading-12 font-medium tracking-tight text-zinc-900 animate-fade-in-up animate-delay-100">
+            <h1 class="text-pretty text-4xl lg:text-6xl leading-12 font-medium tracking-tight text-zinc-900 animate-fade-in-up animate-delay-100">
                 Uw <span class="text-primary">bouwpartner</span> in de regio
             </h1>
             <p class="text-base text-pretty leading-7 text-zinc-500 font-light mt-8 animate-fade-in animate-delay-500">
