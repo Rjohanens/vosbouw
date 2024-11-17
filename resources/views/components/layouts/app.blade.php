@@ -4,6 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- icon -->
+        <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/png">
+
         <title>{{ $title ?? 'Vos Bouw - Bouw- en aannemersberdrijf' }}</title>
         @vite('resources/css/app.css')
     </head>
