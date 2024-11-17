@@ -32,7 +32,7 @@
                         Ons verhaal
                     </h1>
                     <p class="text-white/80 group-hover:text-white font-light mt-4 max-w-2xl">
-                        Vos Bouw B.V. is een bouw- en aannemersbedrijf dat zich richt op nieuwbouw, verbouw, renovatie en onderhoud van woningen en bedrijfspanden. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, voluptate illo dolores aut explicabo, quisquam commodi amet quas provident, reprehenderit nobis. Fugit quisquam dolorum dignissimos ratione vitae saepe quis molestias?
+                        Welkom bij Vos Bouw, een bouwbedrijf met een groot hart voor vakmanschap! Als lokaal bedrijf zetten we ons dagelijks in om de dromen van onze klanten te realiseren, of het nu gaat om een renovatie, een aanbouw of een compleet nieuw project. Door persoonlijk contact, een heldere communicatie en een hands-on aanpak maken wij van elk bouwproces een positieve ervaring. Bij Vos Bouw kennen we onze klanten bij naam en zijn we pas tevreden als zij dat ook zijn.
                     </p>
                     <div>
                         <a href="" class="btn btn-outline mt-8 !border-white !text-white hover:border-none">
@@ -52,8 +52,7 @@
                             Onze missie
                         </h1>
                         <p class="text-gray-700 font-light leading-6">
-                            Bij Vos Bouw staat kwaliteit hoog in het vaandel. Wij werken met ervaren vakmensen en leveren altijd vakwerk. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ducimus libero eius est distinctio enim. Et nulla delectus ratione laudantium nesciunt necessitatibus dolorum similique in vitae quas, atque doloribus eveniet.
-                        </p>
+                            Bij Vos Bouw is het onze missie om hoogwaardige bouwprojecten te realiseren met een persoonlijke touch. Wij geloven in kleinschaligheid als kracht: korte lijnen, een flexibele aanpak en volledige aandacht voor elk detail. Of het nu om een kleine klus gaat of een groter project, wij zetten ons altijd in om duurzame en praktische oplossingen te bieden die perfect passen bij de wensen van onze klanten.                        </p>
                         <div class="flex grow items-end">
                             <a href="" class="btn btn-outline">
                                 Meer informatie
@@ -69,8 +68,7 @@
                             Onze visie
                         </h1>
                         <p class="text-white/80 font-light">
-                            Bij Vos Bouw staat kwaliteit hoog in het vaandel. Wij werken met ervaren vakmensen en leveren altijd vakwerk. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ducimus libero eius est distinctio enim. Et nulla delectus ratione laudantium nesciunt necessitatibus dolorum similique in vitae quas, atque doloribus eveniet.
-                        </p>
+                            Wij bouwen niet alleen voor vandaag, maar ook voor morgen. Vos Bouw wil zich onderscheiden door eerlijk vakmanschap te combineren met toekomstbestendige oplossingen. Als klein bedrijf zijn wij wendbaar en betrokken, wat ons in staat stelt om écht maatwerk te leveren. Onze visie is simpel: bijdragen aan een leefomgeving waar functionaliteit, esthetiek en duurzaamheid samenkomen, altijd met oog voor de wensen van onze klanten en respect voor onze omgeving.                        </p>
                         <div class="flex grow items-end">
                             <a href="" class="btn btn-outline !border-white !text-white hover:border-none">
                                 Meer informatie
