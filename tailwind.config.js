@@ -1,3 +1,5 @@
+import animations from "@midudev/tailwind-animations";
+
 /** @type {import('tailwindcss').Config} */
 export default {
     content: ["./resources/**/*.blade.php", "./resources/**/*.js"],
@@ -13,4 +15,5 @@ export default {
             rubik: ["Rubik", "sans-serif"],
         },
     },
+    plugins: [animations, require("daisyui")],
 };

@@ -19,7 +19,7 @@ class Home extends Component
     #[Computed]
     public function projects()
     {
-        return Project::with('category')->get();
+        return Project::with('category')->take(6)->get();
     }
 
     #[Computed]

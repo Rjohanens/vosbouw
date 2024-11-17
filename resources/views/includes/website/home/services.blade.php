@@ -1,11 +1,11 @@
-<div x-data="{ tabIndex: 0 }" class="mt-8 lg:mt-24 bg-secondary py-8 lg:py-24">
-    <div class="grid grid-cols-1 lg:grid-cols-2 px-8 lg:px-16">
+<div x-data="{ tabIndex: 0 }" class=" bg-white py-6 lg:py-32 mt-16" >
+    <div class="grid grid-cols-1 lg:grid-cols-2 px-8 lg:px-16" x-cloak x-data="{ intersecting: false }" x-intersect="intersecting = true" :class="{ 'animate-fade-in-up': intersecting }">
         <div class="flex flex-col">
             <div class="flex flex-col items-center lg:items-start">
-                <h1 class="text-4xl text-zinc-700">Onze diensten</h1>
-                <div class="w-12 h-1 bg-primary rounded-full mt-4"></div>
+                <h1 class="text-3xl lg:text-5xl text-zinc-900 font-medium">Onze diensten</h1>
+                <div class="w-12 h-1.5 bg-primary rounded-full mt-4"></div>
             </div>
-            <div class="hidden lg:flex flex-col divide-y divide-zinc-300 mt-6 cursor-pointer">
+            <div class="hidden lg:flex flex-col divide-y divide-zinc-300 mt-8 cursor-pointer">
                 @foreach($this->services as $service)
                     <div x-on:click="tabIndex = {{$loop->index}}" :class="tabIndex == {{ $loop->index }} ? '!bg-orange-500 !text-white': ''" class="flex justify-between p-4 text-base font-normal text-zinc-700  hover:bg-zinc-200 transition duration-300">
                         <span>{{ $service->name }} </span>
@@ -45,7 +45,7 @@
                     x-on:click="expanded = !expanded" 
                     class="flex flex-col p-4 border border-zinc-200 hover:border-zinc-400 transition duration-300 cursor-pointer"
                 >
-                    <div class="flex items-center justify-between w-full bg-secondary z-20">
+                    <div class="flex items-center justify-between w-full z-20">
                         <span class="text-base font-normal text-zinc-700">
                             {{ $service->name }}
                         </span>

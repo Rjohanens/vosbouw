@@ -1,6 +1,6 @@
 <div class="grid gird-cols-1 lg:grid-cols-4  bg-gray-950 px-16 py-24 mt-24">
     <div class="col-span-2">
-        <h1 class="text-4xl font-semibold text-white mb-1.5">Vos Bouw B.V.</h1>
+        <h1 class="text-4xl font-semibold text-white mb-1.5">Vos Bouw</h1>
         <span class="text-white text-sm tracking-wide">Bouw- en aannemersbedrijf</span>
     </div>
     <div class="col-span-2 grid grid-col-1 lg:grid-cols-2 mt-12 lg:mt-0">
@@ -26,16 +26,16 @@
             </div>
         </div>
         <div class="flex flex-col text-white mt-12 lg:mt-0">
-            <span class="font-medium tracking-wider">Links</span>
-            <span class="font-light text-sm mt-4">Home</span>
-            <span class="font-light text-sm mt-1.5">Projecten</span>
-            <span class="font-light text-sm mt-1.5">Diensten</span>
-            <span class="font-light text-sm mt-1.5">Over Ons</span>
+            <div class="font-medium tracking-wider">Links</div>
+            <a href="{{ route('home') }}" class="font-light text-sm mt-4">Home</a>
+            <a href="{{ route('project.index') }}" class="font-light text-sm mt-1.5">Projecten</a>
+            <a href="{{ route('service.index') }}" class="font-light text-sm mt-1.5">Diensten</a>
+            <a href="{{ route('contact.index') }}" class="font-light text-sm mt-1.5">Contact</a>
         </div>
     </div>
 </div>
 <div class="bg-orange-500 py-4 px-16">
     <div class="flex justify-between items-center">
-        <span class="text-white text-sm">© {{ now()->format('Y') }} Vos Bouw B.V. Alle rechten voorbehouden.</span>
+        <span class="text-white text-sm">© {{ now()->format('Y') }} Vos Bouw. Alle rechten voorbehouden.</span>
     </div>
 </div>

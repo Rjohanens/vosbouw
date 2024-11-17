@@ -1,5 +1,5 @@
 <div class="px-8 lg:px-32 py-24 lg:py-32 overflow-x-hidden">
-    <h1 class="text-4xl text-zinc-700">Projecten</h1>
+    <h1 class="lg:text-5xl text-zinc-900 font-medium">Projecten</h1>
     <div class="w-12 h-1 bg-primary rounded-full mt-4"></div> 
     <div class="flex flex-wrap justify-start items-center w-full gap-4 mt-16">
         <span class="text-sm text-zinc-500 text-nowrap">Filter op:</span>

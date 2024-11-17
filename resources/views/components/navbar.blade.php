@@ -1,23 +1,20 @@
-<header class="fixed z-50 w-full bg-secondary">
-  <nav class="hidden lg:flex items-center justify-between px-16 py-4">
-    <a href="{{route('home')}}">
-      <div class="flex items-center space-x-4">
-        <img class="h-12 w-auto" src="{{ asset('images/logo.png')}}" alt="">
-        <div class="flex flex-col space-y-0">
-            <h1 class="text-zinc-700 text-2xl font-medium">
-                Vos Bouw
-            </h1>
-            <span class="text-zinc-700 text-sm">Bouw- en aannemersbedrijf</span>
-        </div>
+<header id="navbar" x-data="{ scrolled: false }" x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 1 })" :class="{ 'bg-white/95 backdrop-blur-md border border-zinc-100': scrolled, 'bg-transparent': !scrolled }" class="fixed top-0 z-50 w-full transition-colors duration-300">
+  <nav class="hidden lg:flex justify-between px-8 py-4">
+    <div class="flex items-center space-x-4">
+      <img class="h-10 w-auto" src="{{ asset('images/logo.png')}}" alt="logo">
+      <div class="flex flex-col">
+        <h1 class="text-xl text-zinc-900 font-normal">Vos Bouw</h1>
+        <p class="text-sm text-zinc-700 font-light">Bouw- en aannemersbedrijf</p>
       </div>
-    </a>
-    <div class="flex gap-x-8 items-center justify-end">
-      <a href="{{route('home')}}" class="text-sm hover:text-primary transition-colors duration-300 @if(Str::startswith($activeRouteName, 'home')) text-primary @else text-zinc-700 @endif">Home</a>
-      <a href="{{route('project.index')}}" class="text-sm hover:text-primary transition-colors duration-300 @if(Str::startswith($activeRouteName, 'project')) text-primary @else text-zinc-700 @endif">Projecten</a>
-      <a href="{{route('service.index')}}" class="text-sm hover:text-primary transition-colors duration-300 @if(Str::startswith($activeRouteName, 'service')) text-primary @else text-zinc-700 @endif">Diensten</a>      
-      <a href="#contact" class="text-sm hover:text-primary transition-colors duration-300 @if(Str::startswith($activeRouteName, 'contact')) text-primary @else text-zinc-700 @endif">Contact</a>
     </div>
-    <a href="#contact" class="bg-dark px-4 py-3 rounded-lg text-sm text-white shadow-sm hover:bg-primary transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">Offerte aanvragen</a>
+    <div class="flex gap-x-8 items-center justify-end">
+      <a href="{{route('home')}}" class="text-base hover:text-primary transition-colors duration-300 @if(Str::startswith($activeRouteName, 'home')) font-medium text-primary @else text-zinc-900 @endif">Home</a>
+      <a href="{{route('project.index')}}" class="text-base hover:text-primary transition-colors duration-300 @if(Str::startswith($activeRouteName, 'project')) font-medium text-primary @else text-zinc-900 @endif">Projecten</a>
+      <a href="{{route('service.index')}}" class="text-base hover:text-primary transition-colors duration-300 @if(Str::startswith($activeRouteName, 'service')) font-medium text-primary @else text-zinc-900 @endif">Diensten</a>      
+      <a href="{{ route('contact.index') }}" class="text-base hover:text-primary transition-colors duration-300 @if(Str::startswith($activeRouteName, 'contact')) font-medium text-primary @else text-zinc-900 @endif">Contact</a>
+    </div>
+    <div class="flex items-center space-x-4">
+      <a href="{{ route('contact.index') }}" class="bg-dark text-white text-base px-4 py-3 rounded-full">Offerte aanvragen</a>
   </nav>
   <!-- mobile menu -->
   <nav x-data="{open: false}" class="lg:hidden flex items-center justify-between px-4 py-2">
@@ -55,9 +52,8 @@
         <a href="{{route('home')}}" class="text-white text-lg hover:text-dark transition-colors duration-300">Home</a>
         <a href="{{route('project.index')}}" class="text-white text-lg hover:text-dark transition-colors duration-300">Projecten</a>
         <a href="{{route('service.index')}}" class="text-white text-lg hover:text-dark transition-colors duration-300">Diensten</a>
-        <a href="#contact" class="text-white text-lg hover:text-dark transition-colors duration-300">Contact</a>
+        <a href="{{route('contact.index')}}" class="text-white text-lg hover:text-dark transition-colors duration-300">Contact</a>
       </div>
     </div>
   </nav>
-
 </header>

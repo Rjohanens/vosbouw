@@ -11,3 +11,25 @@ x-cloak {
 body {
     font-family: "Poppins", sans-serif;
 }
+
+.btn-brand {
+    background-color: #fc7d14;
+    color: #fff;
+}
+
+.btn-dark {
+    background-color: #0f0f10;
+    color: #fff;
+}
+
+.btn-dark:hover {
+    background-color: #1a1a1b;
+}
+
+.btn-brand:hover {
+    background-color: #f96e0b;
+}
+
+.btn {
+    box-shadow: none;
+}

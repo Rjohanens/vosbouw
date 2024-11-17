@@ -16,7 +16,7 @@ class ContactForm extends Form
     #[Validate(['required', 'email', 'max:254'])]
     public string $email = '';
 
-    #[Validate(['required', 'string', 'min:1', 'max:10'])]
+    #[Validate(['nullable', 'string', 'min:1', 'max:10'])]
     public string $phone = '';
 
     #[Validate(['required', 'string', 'min:1', 'max:4096'])]
