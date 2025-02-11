@@ -58,6 +58,17 @@ class Project extends Model implements HasMedia
         return $query->where('featured', true);
     }
 
+    public function getThumbnailUrl(): string | null
+    {
+        $media = $this->media();
+
+        if ($media->doesntExist()) {
+            return null;
+        }
+
+        return $media->first()->getAvailableUrl(['optimized']);
+    }
+
     public function registerMediaConversions(Media $media = null): void
     {
         $this->addMediaConversion('optimized')

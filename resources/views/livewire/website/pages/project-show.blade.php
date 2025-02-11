@@ -29,12 +29,12 @@
     <div class="mt-8 lg:mt-0">
         <div class="flex flex-col w-full items-start lg:items-center">
             <div class="w-full lg:w-96 aspect-square bg-zinc-300 rounded-lg">
-                <img src="{{ $project->thumbnail()?->getUrl() }}" alt="{{ $project->title }}" class="object-cover w-full h-full rounded-lg">
+                <img src="{{ $project->getThumbnailUrl() }}" alt="{{ $project->title }}" class="object-cover w-full h-full rounded-lg">
             </div>
             <div class="flex justify-between w-full lg:w-96 gap-x-2 mt-4">
                 @forelse ($project->getMedia() as $image)
                     <div class="w-20 aspect-square bg-zinc-200 rounded-lg">
-                        <img src="{{ $image->getUrl() }}" alt="{{ $project->title }}" class="object-cover w-full h-full rounded-lg">
+                        <img src="{{ $image->getAvailableUrl(['optimized']) }}" alt="{{ $project->title }}" class="object-cover w-full h-full rounded-lg">
                     </div>
                 @empty
                 @endforelse
