@@ -44,7 +44,7 @@
                     @if($form->project?->media)
                         @foreach($form->project?->media as $media)
                             <div class="relative group flex gap-x-4">
-                                <img src="{{ $media->getUrl() }}" alt="Afbeelding" class="w-full object-cover rounded-lg">
+                                <img src="{{ $media->getAvailableUrl(['optimized']) }}" alt="Afbeelding" class="w-full object-cover rounded-lg">
                                 <div class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                                     <x-button-icon icon="trash" wire:click="deleteMedia({{$media->id}})"></x-button-icon>
                                 </div>
