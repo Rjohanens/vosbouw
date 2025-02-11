@@ -57,4 +57,13 @@ class Project extends Model implements HasMedia
     {
         return $query->where('featured', true);
     }
+
+    public function registerMediaConversions(Media $media = null): void
+    {
+        $this->addMediaConversion('optimized')
+            ->width(384)
+            ->height(384)
+            ->sharpen(10)
+            ->quality(80);
+    }
 }
