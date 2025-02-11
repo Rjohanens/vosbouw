@@ -5,10 +5,7 @@
         <p class="mt-2 text-sm text-gray-700">Creeër, bewerk en verwijder projecten</p>
     </div>
     <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
-        <a href="{{ route('auth.project.create') }}" class="flex items-center space-x-2 rounded-md bg-primary px-4 py-2 text-center text-sm font-lighth text-white shadow-sm hover:bg-orange400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 cursor-pointer">
-            <svg class="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>
-            <span>Project toevoegen</span>
-        </a>
+        <x-button wire:click="$dispatch('create-project')" label="Project toevoegen" icon="plus" />
     </div>
     </div>
     <div class="mt-8 flow-root">
@@ -21,9 +18,9 @@
                         <th scope="col" class="px-3 py-3.5 text-left text-sm font-medium text-gray-900">Beschrijving</th>
                         <th scope="col" class="px-3 py-3.5 text-left text-sm font-medium text-gray-900">Categorie</th>
                         <th scope="col" class="px-3 py-3.5 text-left text-sm font-medium text-gray-900">Uitgelicht</th>
-                        <th scope="col" class="px-3 py-3.5 text-left text-sm font-medium text-gray-900">Concept</th>
+                        <th scope="col" class="px-3 py-3.5 text-left text-sm font-medium text-gray-900">Gepubliceerd</th>
                         <th scope="col" class="px-3 py-3.5 text-left text-sm font-medium text-gray-900">Uitgevoerd op</th>
-                        <th scope="col" class="px-3 py-3.5 text-right text-sm font-medium text-gray-900">Acties</th>
+                        <th scope="col" class="px-3 py-3.5 text-left text-sm font-medium text-gray-900">Acties</th>
                     </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-200">
@@ -44,7 +41,7 @@
                                     @endif
                                 </td>
                                 <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                    @if($project->draft)
+                                    @if($project->status === App\Enum\ProjectStatus::PUBLISHED)
                                         <svg class="text-primary w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
                                     @endif
                                 </td>
@@ -52,7 +49,7 @@
                                    {{ $project->execution_date->format('d-m-Y') }}
                                 </td>
                                 <td class="flex items-center space-x-4 relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
-                                    <a href="#" class="text-primary hover:text-orange-400">Bewerken</a>
+                                    <x-button-link label="Bewerken" wire:key="{{$project->id}}" wire:click="$dispatch('update-project', { project: {{ $project->id }} })" />
                                 </td>
                             </tr>
                         @endforeach
@@ -64,4 +61,5 @@
             {{ $this->projects->links() }}
         </div>
     </div>
+    <livewire:auth.project.components.project-modal />
 </div>

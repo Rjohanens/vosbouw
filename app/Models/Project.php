@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enum\ProjectStatus;
 use App\Models\Category;
 use Illuminate\Support\Str;
 use Spatie\MediaLibrary\HasMedia;
@@ -21,13 +22,13 @@ class Project extends Model implements HasMedia
         'category_id',
         'slug',
         'featured',
-        'draft',
+        'status',
     ];
 
     protected $casts = [
         'execution_date' => 'datetime',
         'featured' => 'boolean',
-        'draft' => 'boolean',
+        'status' => ProjectStatus::class,
     ];
 
     public static function booted()
@@ -45,5 +46,15 @@ class Project extends Model implements HasMedia
     public function thumbnail(): Media|null
     {
         return $this->getFirstMedia();
+    }
+
+    public function scopePublished($query)
+    {
+        return $query->where('status', ProjectStatus::PUBLISHED);
+    }
+
+    public function scopeFeatured($query)
+    {
+        return $query->where('featured', true);
     }
 }

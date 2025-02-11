@@ -1,3 +1,19 @@
-<button type="button" {{ $attributes->merge(['class' => '  w-fit px-4 py-3 text-sm font-medium border border-zinc-400 shadow-sm hover:bg-orange-500 hover:border-orange-500 hover:text-white transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600'])}}>
-    {{ $slot }}
-</button>
+@isset($href)
+    <a href="{{ $href }}" {{ $attributes }} class="block rounded-md bg-primary px-3 py-2 text-sm font-normal text-white shadow-sm hover:bg-primary/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+        <div class="flex space-x-2 items-center">
+            <span>{{ $label }}</span>
+            @isset($icon)
+                @include('assets.icons.' . $icon)
+            @endisset
+        </div>
+    </a>
+@else
+    <button {{ $attributes->whereStartsWith('wire') }} type="{{$type}}" class="rounded-md bg-primary px-3 py-2 text-sm font-normal text-white shadow-sm hover:bg-primary/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+        <div class="flex space-x-2 items-center">
+            <span>{{ $label }}</span>
+            @isset($icon)
+                @include('assets.icons.' . $icon)
+            @endisset
+        </div>
+    </button>
+@endisset

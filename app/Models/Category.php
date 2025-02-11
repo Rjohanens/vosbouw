@@ -15,4 +15,9 @@ class Category extends Model
     {
         return $this->hasMany(Project::class);
     }
+
+    public static function default(): self
+    {
+        return self::where('name', 'Algemeen')->firstOrFail();
+    }
 }

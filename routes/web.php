@@ -25,6 +25,7 @@ Route::get('/login', [AuthController::class, 'show'])->name('auth.show');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 Route::prefix('/auth')->name('auth.')->middleware('auth:sanctum')->group(function () {
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
 
     Route::prefix('/project')->name('project.')->group(function () {

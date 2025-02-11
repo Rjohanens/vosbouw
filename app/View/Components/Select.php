@@ -6,25 +6,22 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Button extends Component
+class Select extends Component
 {
     /**
      * Create a new component instance.
      */
     public function __construct(
-        public string $label = '',
-        public string $type = 'button',
-        public ?string $href = null,
-        public ?string $icon = null,
-    ) {
-        //
-    }
+        public string $name = '',
+        public string $selected = '',
+        public ?string $label = null,
+    ) {}
 
     /**
      * Get the view / contents that represent the component.
      */
     public function render(): View|Closure|string
     {
-        return view('components.button');
+        return view('components.select');
     }
 }

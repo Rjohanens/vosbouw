@@ -8,7 +8,7 @@
 </head>
 <body class="font-rubik">
 	<div>
-		@include('includes.auth.components.sidebar')
+		@include('includes.auth.components.sidebar.container')
 		<div class="lg:pl-72">
 			@include('includes.auth.components.topbar')
 			<main class="py-10">
