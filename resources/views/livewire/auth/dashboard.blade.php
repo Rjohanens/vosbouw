@@ -53,7 +53,7 @@
                     </p>
                     <div class="absolute inset-x-0 bottom-0 bg-gray-50 px-4 py-4 sm:px-6">
                         <div class="text-sm">
-                            <a href="#" class="font-normal text-primary hover:text-primary/80">Bekijk alle<span class="sr-only"> Total Subscribers stats</span></a>
+                            <a href="{{ route('auth.page-views.index') }}" class="font-normal text-primary hover:text-primary/80">Bekijk alle</a>
                         </div>
                     </div>
                 </dd>
