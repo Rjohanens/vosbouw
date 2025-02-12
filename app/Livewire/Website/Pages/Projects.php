@@ -30,6 +30,7 @@ class Projects extends Component
     public function projects()
     {
         return Project::with('category')
+            ->published()
             ->when($this->filter, fn($query) => $query->whereRelation('category', 'name', $this->filter))
             ->paginate(9);
     }

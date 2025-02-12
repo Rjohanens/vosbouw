@@ -13,7 +13,7 @@ class Services extends Component
     #[Computed]
     public function services()
     {
-        return Service::all();
+        return Service::published()->get();
     }
 
     #[Layout('components.layouts.app')]
