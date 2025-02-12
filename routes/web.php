@@ -9,6 +9,7 @@ use App\Livewire\Website\Pages\ProjectShow;
 use App\Livewire\Website\Pages\ServiceShow;
 use App\Livewire\Website\Pages\Contact;
 use App\Http\Controllers\Auth\AuthController;
+use App\Livewire\Auth\PageView\Index;
 use App\Livewire\Auth\Project\Index as ProjectIndex;
 use App\Livewire\Auth\Service\Index as ServiceIndex;
 use App\Livewire\Auth\Project\Create as ProjectCreate;
@@ -35,4 +36,6 @@ Route::prefix('/auth')->name('auth.')->middleware('auth:sanctum')->group(functio
     Route::prefix('/service')->name('service.')->group(function () {
         Route::get('', ServiceIndex::class)->name('index');
     });
+
+    Route::get('/page-views', Index::class)->name('page-views.index');
 });

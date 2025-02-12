@@ -58,6 +58,11 @@ class PageView extends Model
         return $query->where('url', '/');
     }
 
+    public function scopeContact($query)
+    {
+        return $query->where('url', 'contact');
+    }
+
     public function scopeProject($query)
     {
         return $query->where('url', 'projecten');
