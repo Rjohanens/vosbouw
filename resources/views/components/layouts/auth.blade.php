@@ -18,5 +18,6 @@
 			</main>
 		</div>
 	</div>
+	<livewire:toast />
 </body>
 </html>

@@ -13,5 +13,4 @@
 			</form>
 		</div>
 	</div>
-	<livewire:toast />
 </x-layouts.app>

@@ -12,7 +12,7 @@
             <!-- Separator -->
             <div class="hidden lg:block lg:h-6 lg:w-px lg:bg-gray-200" aria-hidden="true"></div>
             <!-- Profile dropdown -->
-            <div x-data="{showMenu: false}" class="relative">
+            <div x-cloak x-data="{showMenu: false}" class="relative">
                 <button x-on:click="showMenu = !showMenu" type="button" class="-m-1.5 flex items-center p-1.5" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                     <span class="sr-only">Open user menu</span>
                     <div class="flex items-center justify-center h-8 w-8 rounded-full bg-gray-100">
@@ -29,7 +29,10 @@
                 </button>
                 <div x-show="showMenu" class="absolute right-0 z-10 mt-2.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                     <a href="#" class="block px-3 py-1 text-sm leading-6 text-gray-900" role="menuitem" tabindex="-1" id="user-menu-item-0">Account</a>
-                    <a href="#" class="block px-3 py-1 text-sm leading-6 text-gray-900" role="menuitem" tabindex="-1" id="user-menu-item-1">Uitloggen</a>
+                    <form method="POST" action="{{ route('auth.logout') }}">
+                        @csrf
+                        <button type="submit" class="block px-3 py-1 text-sm leading-6 text-gray-900" role="menuitem" tabindex="-1" id="user-menu-item-1">Uitloggen</a>
+                    </form>
                 </div>
             </div>
         </div>

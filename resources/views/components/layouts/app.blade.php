@@ -16,5 +16,6 @@
                 {{ $slot}}
             <x-footer></x-footer>
         </div>
+        <livewire:toast />
     </body>
 </html>

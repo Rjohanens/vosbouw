@@ -76,6 +76,13 @@ class ServiceModal extends Component
             }
         }
 
+        $this->dispatch(
+            'open-toast',
+            title: 'Wijzigingen opgeslagen',
+            message: 'De dienst is succesvol opgeslagen.',
+            type: 'success',
+        );
+
         $this->dispatch('refresh')->to(Index::class);
         $this->close();
     }
