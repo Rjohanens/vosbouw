@@ -1,5 +1,5 @@
 <div class="px-4 sm:px-6 lg:px-8">
-    <h1 class="cursor-pointer text-xl leading-6 text-gray-900">Projecten</h1>
+    <h1 class="cursor-pointer text-xl leading-6 text-gray-900">Dashboard</h1>
     <div>
         <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             <div class="relative overflow-hidden rounded-lg bg-white px-4 pb-12 pt-5 shadow sm:px-6 sm:pt-6">
