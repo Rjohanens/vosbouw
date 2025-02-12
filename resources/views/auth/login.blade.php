@@ -1,5 +1,4 @@
 <x-layouts.app>
-
 	<div class="flex min-h-screen items-center justify-center">
 		<div class="flex flex-col w-full max-w-md shadow-sm border rounded-md p-8">
 			<h1 class="text-3xl text-center text-gray-900">Vos Bouw</h1>
@@ -24,4 +23,5 @@
 			@endif
 		</div>
 	</div>
+	<livewire:toast />
 </x-layouts.app>
