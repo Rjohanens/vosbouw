@@ -1,7 +1,7 @@
 <div class="px-4 sm:px-6 lg:px-8">
     <div class="sm:flex sm:items-center border-b pb-4">
         <div class="sm:flex-auto">
-            <h1 wire:click="test" class="cursor-pointer text-xl leading-6 text-gray-900">Diensten</h1>
+            <h1 class="cursor-pointer text-xl leading-6 text-gray-900">Diensten</h1>
             <p class="mt-2 text-sm text-gray-700">Creeër, bewerk en verwijder diensten</p>
         </div>
         <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
