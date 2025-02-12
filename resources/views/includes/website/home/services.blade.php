@@ -18,7 +18,7 @@
             @foreach($this->services as $service)
                 <div x-show="tabIndex === {{$loop->index}}" class="flex flex-col pl-16">
                     <div class="w-full bg-zinc-300 aspect-video rounded-lg">
-                        <img class="object-cover w-full h-full rounded-lg" src="{{ $service->thumbnail()?->getUrl() }}" alt="{{ $service->name }}">
+                        <img class="object-cover w-full h-full rounded-lg" src="{{ $service->getThumbnailUrl() }}" alt="{{ $service->name }}">
                     </div>
                     <p class="mt-6 text-sm leading-7 font-light text-zinc-700">
                         {{ $service->description }}

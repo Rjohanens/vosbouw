@@ -19,13 +19,13 @@ class Home extends Component
     #[Computed]
     public function projects()
     {
-        return Project::published()->featured()->with('category')->take(6)->get();
+        return Project::featured()->with('category')->limit(6)->get();
     }
 
     #[Computed]
     public function services()
     {
-        return Service::all();
+        return Service::featured()->limit(6)->get();
     }
 
     public function submitContactForm()

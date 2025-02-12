@@ -2,7 +2,7 @@
 
 namespace App\Livewire\Forms;
 
-use App\Enum\ProjectStatus;
+use App\Enum\StatusEnum;
 use App\Models\Category;
 use App\Models\Project;
 use Carbon\Carbon;
@@ -19,7 +19,7 @@ class ProjectForm extends Form
     public string $execution_date = '';
     public bool $featured = false;
     public ?Category $category = null;
-    public ProjectStatus $status = ProjectStatus::DRAFT;
+    public StatusEnum $status = StatusEnum::DRAFT;
 
     public function rules()
     {
@@ -28,7 +28,7 @@ class ProjectForm extends Form
             'description' => 'required|string|min:1|max:4096',
             'execution_date' => 'required|date',
             'category' => ['required'],
-            'status' => ['required', new Enum(ProjectStatus::class)],
+            'status' => ['required', new Enum(StatusEnum::class)],
             'featured' => 'required|boolean',
         ];
     }

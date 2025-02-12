@@ -1,44 +1,36 @@
 <?php
 
-namespace App\Livewire\Auth\Project\Components;
+namespace App\Livewire\Auth\Service\Components;
 
 use App\Enum\StatusEnum;
-use App\Livewire\Auth\Project\Index;
-use App\Livewire\Forms\ProjectForm;
-use App\Models\Category;
-use App\Models\Project;
+use App\Livewire\Auth\Service\Index;
+use App\Livewire\Forms\ServiceForm;
+use App\Models\Service;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\On;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
-class ProjectModal extends Component
+class ServiceModal extends Component
 {
     use WithFileUploads;
 
     public bool $show = false;
-    public ProjectForm $form;
+    public ServiceForm $form;
     public $images;
 
-    public function mount()
-    {
-        $this->form->category = Category::default();
-    }
-
-    #[On('create-project')]
+    #[On('create-service')]
     public function open()
     {
         $this->form->reset();
-        $this->form->category = Category::default();
-
         $this->show = true;
     }
 
-    #[On('update-project')]
-    public function openWithProject(Project $project)
+    #[On('update-service')]
+    public function openWithProject(Service $service)
     {
-        $this->form->setForm($project);
+        $this->form->setForm($service);
         $this->show = true;
     }
 
@@ -47,11 +39,6 @@ class ProjectModal extends Component
         $this->images = null;
         $this->form->reset();
         $this->show = false;
-    }
-
-    public function selectCategory(Category $category)
-    {
-        $this->form->category = $category;
     }
 
     public function selectStatus(string $status)
@@ -79,24 +66,18 @@ class ProjectModal extends Component
     {
         $this->form->validate();
 
-        $project = $this->form->project
+        $service = $this->form->service
             ? $this->form->update()
             : $this->form->store();
 
         if ($this->images) {
             foreach ($this->images as $image) {
-                $project->addMedia($image->getRealPath())->toMediaCollection();
+                $service->addMedia($image->getRealPath())->toMediaCollection();
             }
         }
 
-        $this->close();
         $this->dispatch('refresh')->to(Index::class);
-    }
-
-    #[Computed]
-    public function categories()
-    {
-        return Category::all();
+        $this->close();
     }
 
     #[Computed]
@@ -107,6 +88,6 @@ class ProjectModal extends Component
 
     public function render()
     {
-        return view('livewire.auth.project.components.project-modal');
+        return view('livewire.auth.service.components.service-modal');
     }
 }
