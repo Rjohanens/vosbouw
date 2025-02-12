@@ -52,7 +52,9 @@
                     <p class="ml-16 truncate text-sm font-normal text-gray-700">Aantal paginaweergaven</p>
                 </dt>
                 <dd class="ml-16 flex items-baseline pb-6 sm:pb-7">
-                    <p class="text-2xl font-normal text-gray-900">71,897</p>
+                    <p class="text-2xl font-normal text-gray-900">
+                        {{ Illuminate\Support\Number::forHumans($this->pageViews) }}
+                    </p>
                     <div class="absolute inset-x-0 bottom-0 bg-gray-50 px-4 py-4 sm:px-6">
                         <div class="text-sm">
                             <a href="#" class="font-normal text-primary hover:text-primary/80">Bekijk alle<span class="sr-only"> Total Subscribers stats</span></a>

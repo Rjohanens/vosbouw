@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Auth;
 
+use App\Models\PageView;
 use App\Models\Project;
 use App\Models\Service;
 use Livewire\Attributes\Computed;
@@ -21,6 +22,12 @@ class Dashboard extends Component
     public function serviceCount(): int
     {
         return Service::count();
+    }
+
+    #[Computed]
+    public function pageViews(): int
+    {
+        return PageView::count();
     }
 
     #[Layout('components.layouts.auth')]

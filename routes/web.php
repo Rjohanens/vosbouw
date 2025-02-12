@@ -30,7 +30,6 @@ Route::prefix('/auth')->name('auth.')->middleware('auth:sanctum')->group(functio
 
     Route::prefix('/project')->name('project.')->group(function () {
         Route::get('', ProjectIndex::class)->name('index');
-        Route::get('/create', ProjectCreate::class)->name('create');
     });
 
     Route::prefix('/service')->name('service.')->group(function () {
