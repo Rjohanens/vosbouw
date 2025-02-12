@@ -6,6 +6,7 @@ use Livewire\Component;
 use App\Mail\ContactFormMail;
 use Livewire\Attributes\Layout;
 use App\Livewire\Forms\ContactForm;
+use App\Models\ContactRequest;
 use Illuminate\Support\Facades\Mail;
 
 class Contact extends Component
@@ -34,7 +35,21 @@ class Contact extends Component
                 )
             );
 
-        $this->hasSuccessMessage = true;
+        ContactRequest::create([
+            'first_name' => $validated['firstName'],
+            'last_name' => $validated['lastName'],
+            'email' => $validated['email'],
+            'phone' => $validated['phone'],
+            'message' => $validated['message'],
+        ]);
+
+        $this->dispatch(
+            'open-toast',
+            title: 'Contactformulier verzonden',
+            message: 'Bedankt voor uw bericht. We nemen zo snel mogelijk contact met u op.',
+            type: 'success',
+        );
+
         $this->form->reset();
     }
 }

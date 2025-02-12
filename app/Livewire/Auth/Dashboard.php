@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Auth;
 
+use App\Models\ContactRequest;
 use App\Models\PageView;
 use App\Models\Project;
 use App\Models\Service;
@@ -28,6 +29,12 @@ class Dashboard extends Component
     public function pageViews(): int
     {
         return PageView::count();
+    }
+
+    #[Computed]
+    public function contactRequests()
+    {
+        return ContactRequest::paginate();
     }
 
     #[Layout('components.layouts.auth')]

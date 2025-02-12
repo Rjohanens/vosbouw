@@ -60,4 +60,55 @@
             </div>
         </dl>
     </div>
+    <div class="sm:flex sm:items-center mt-16">
+        <div class="sm:flex-auto">
+            <h1 class="cursor-pointer text-xl leading-6 text-gray-900">Contact aanvragen</h1>
+        </div>
+    </div>
+    <div class="shadow p-4 rounded-md mt-4">
+    <div class="mt-8 flow-root">
+        <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="inline-block min-w-full py-2 align-start sm:px-6 lg:px-8">
+                <table class="min-w-full divide-y">
+                    <thead>
+                    <tr>
+                        <th scope="col" class="pr-3 py-3.5 text-left text-sm font-medium text-gray-900">Naam</th>
+                        <th scope="col" class="px-3 py-3.5 text-left text-sm font-medium text-gray-900">Email</th>
+                        <th scope="col" class="px-3 py-3.5 text-left text-sm font-medium text-gray-900">Telefoonnummer</th>
+                        <th scope="col" class="px-3 py-3.5 text-left text-sm font-medium text-gray-900">Bericht</th>
+                        <th scope="col" class="px-3 py-3.5 text-left text-sm font-medium text-gray-900">Verstuurd op</th>
+                        <th scope="col" class="px-3 py-3.5 text-left text-sm font-medium text-gray-900"></th>
+                    </tr>
+                </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        @forelse($this->contactRequests as $contactRequest)
+                            <tr>
+                                <td class="whitespace-nowrap py-4 text-sm text-gray-500">
+                                    {{ $contactRequest->first_name }} {{ $contactRequest->last_name }}
+                                </td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                                    {{ $contactRequest->email }}
+                                </td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                                    {{ $contactRequest->phone }}
+                                </td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                                    {{ $contactRequest->message }}
+                                </td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                                    {{ $contactRequest->created_at->format('d-m-Y') }}
+                                </td>
+                        @empty
+                            <tr>
+                                <td class="whitespace-nowrap py-4 text-sm text-gray-500">
+                                    Geen contact aanvragen gevonden.
+                                </td>
+                            </tr>
+                        @endforelse
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> 
+    </div>
 </div>
