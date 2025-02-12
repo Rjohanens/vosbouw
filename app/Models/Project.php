@@ -74,7 +74,6 @@ class Project extends Model implements HasMedia
         $this->addMediaConversion('optimized')
             ->width(384)
             ->height(384)
-            ->sharpen(10)
-            ->quality(80);
+            ->quality(90);
     }
 }
