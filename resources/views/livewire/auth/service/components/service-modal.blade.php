@@ -1,6 +1,6 @@
 <div x-data="{ isOpen: @entangle('show').live }" x-on:keydown.escape.window="isOpen = false" x-cloak class="w-full">
     <div x-show="isOpen" class="fixed inset-0 flex items-center justify-center w-full z-50 bg-black bg-opacity-50">
-        <div x-show="isOpen" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0 translate-y-[-10px]" x-transition:enter-end="opacity-100 translate-y-0" x-on:click.outside="isOpen = false" class="bg-white rounded-lg shadow-lg w-full max-w-2xl p-4">
+        <div x-show="isOpen" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0 translate-y-[-10px]" x-transition:enter-end="opacity-100 translate-y-0" x-on:click.outside="isOpen = false" class="relative bg-white rounded-lg shadow-lg w-full max-w-2xl p-4 max-h-[calc(100vh-100px)] overflow-y-auto">
             <div class="flex justify-between items-center">
                 <h3 class="text-lg">Dienst aanmaken</h3>
             </div>
@@ -23,7 +23,7 @@
                     <x-file-upload label="Afbeelding" name="images" wire:model.live="images"></x-file-upload>
                 </div>
 
-                <div class="grid grid-cols-4 gap-x-6 gap-y-2 col-span-2 mt-4">
+                <div class="grid grid-cols-4 gap-x-6 gap-y-2 col-span-2 mt-4 max-h-52 overflow-y-auto overflow-x-hidden">
                     @if($images)
                         @foreach($images as $image)
                         <div class="relative group flex gap-x-4">
@@ -46,7 +46,7 @@
                     @endif 
                 </div>
             </div>
-            <div class="flex justify-end space-x-2">
+            <div class="flex justify-end space-x-2 sticky -bottom-4 bg-white p-4">
                 <x-button-link label="Annuleren" wire:click="close"></x-button-link>
                 <x-button wire:click="save" label="Opslaan"></x-button>
             </div>
