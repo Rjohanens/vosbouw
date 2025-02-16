@@ -72,8 +72,7 @@ class Project extends Model implements HasMedia
     public function registerMediaConversions(Media $media = null): void
     {
         $this->addMediaConversion('optimized')
-            ->width(384)
-            ->height(384)
-            ->quality(90);
+            ->width(1024)
+            ->height(1024);
     }
 }
