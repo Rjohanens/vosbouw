@@ -1,12 +1,14 @@
 <header id="navbar" x-data="{ scrolled: false }" x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 1 })" :class="{ 'bg-white/95 backdrop-blur-md border border-zinc-100': scrolled, 'bg-transparent': !scrolled }" class="fixed top-0 z-50 w-full transition-colors duration-300">
   <nav class="hidden lg:flex justify-between px-8 py-4">
-    <div class="flex items-center space-x-4">
-      <img class="h-10 w-auto" src="{{ asset('images/logo.png')}}" alt="logo">
-      <div class="flex flex-col">
-        <h1 class="text-xl text-zinc-900 font-normal">Vos Bouw</h1>
-        <p class="text-sm text-zinc-700 font-light">Bouw- en aannemersbedrijf</p>
+    <a href="{{ route('home')}}">
+      <div class="flex items-center space-x-4 cursor-pointer">
+        <img class="h-10 w-auto" src="{{ asset('images/logo.png')}}" alt="logo">
+        <div class="flex flex-col">
+          <h1 class="text-xl text-zinc-900 font-normal">Vos Bouw</h1>
+          <p class="text-sm text-zinc-700 font-light">Bouw- en aannemersbedrijf</p>
+        </div>
       </div>
-    </div>
+    </a>
     <div class="flex gap-x-8 items-center justify-end">
       <a href="{{route('home')}}" class="text-base hover:text-primary transition-colors duration-300 @if(Str::startswith($activeRouteName, 'home')) font-medium text-primary @else text-zinc-900 @endif">Home</a>
       <a href="{{route('project.index')}}" class="text-base hover:text-primary transition-colors duration-300 @if(Str::startswith($activeRouteName, 'project')) font-medium text-primary @else text-zinc-900 @endif">Projecten</a>
