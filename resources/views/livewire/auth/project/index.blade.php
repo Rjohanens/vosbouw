@@ -29,7 +29,7 @@
                                 <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">
                                     {{ $project->title }}
                                 </td>
-                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 max-w-lg truncate">
                                     {{ $project->description }}
                                 </td>
                                 <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
