@@ -29,7 +29,7 @@
                 <x-file-upload label="Afbeelding" name="images" wire:model.live="images"></x-file-upload>
             </div>
 
-            <div class="grid grid-cols-4 gap-x-6 gap-y-2 col-span-2 mt-4 max-h-52 overflow-y-auto overflow-x-hidden">
+            <div class="grid grid-cols-4 gap-x-6 gap-y-2 col-span-2 mt-4">
                 @if($images)
                 @foreach($images as $image)
                 <div class="relative group flex gap-x-4">
