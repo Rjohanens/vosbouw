@@ -29,7 +29,7 @@
                                 <td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">
                                     {{ $service->name }}
                                 </td>
-                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 max-w-lg truncate">
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 max-w-md truncate">
                                     {{ $service->description }}
                                 </td>
                                 <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
