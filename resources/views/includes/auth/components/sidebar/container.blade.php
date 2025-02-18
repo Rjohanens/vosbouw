@@ -12,8 +12,8 @@
               <x-sidebar.item label="Dashboard" icon="home" :to="route('auth.dashboard')" />
               <x-sidebar.item label="Projecten" icon="project" :to="route('auth.project.index')" />
               <x-sidebar.item label="Diensten" icon="service" :to="route('auth.service.index')" />
+              <x-sidebar.item label="Categorieën" icon="list" :to="route('auth.category.index')" />
               <x-sidebar.item label="Paginaweergaven" icon="chart-line" :to="route('auth.page-views.index')" />
-
             </ul>
           </li>
         </ul>

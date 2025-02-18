@@ -12,7 +12,7 @@ use App\Http\Controllers\Auth\AuthController;
 use App\Livewire\Auth\PageView\Index;
 use App\Livewire\Auth\Project\Index as ProjectIndex;
 use App\Livewire\Auth\Service\Index as ServiceIndex;
-use App\Livewire\Auth\Project\Create as ProjectCreate;
+use App\Livewire\Auth\Category\Index as CategoryIndex;
 
 Route::get('/', Home::class)->name('home');
 Route::get('/diensten', Services::class)->name('services');
@@ -28,14 +28,8 @@ Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::prefix('/auth')->name('auth.')->middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
-
-    Route::prefix('/project')->name('project.')->group(function () {
-        Route::get('', ProjectIndex::class)->name('index');
-    });
-
-    Route::prefix('/service')->name('service.')->group(function () {
-        Route::get('', ServiceIndex::class)->name('index');
-    });
-
+    Route::get('/project', ProjectIndex::class)->name('project.index');
+    Route::get('/service', ServiceIndex::class)->name('service.index');
+    Route::get('/category', CategoryIndex::class)->name('category.index');
     Route::get('/page-views', Index::class)->name('page-views.index');
 });
