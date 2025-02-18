@@ -20,6 +20,24 @@ class Index extends Component
         return Service::latest()->paginate(10);
     }
 
+    public function deleteService(Service $service)
+    {
+        if ($service->media()->exists()) {
+            foreach ($service->media as $media) {
+                $media->delete();
+            }
+        }
+        $service->delete();
+
+        $this->dispatch(
+            'open-toast',
+            title: 'Dienst verwijderd',
+            message: 'De dienst is succesvol verwijderd.',
+            type: 'success',
+        );
+        $this->dispatch('refresh');
+    }
+
     #[On('refresh')]
     public function render()
     {

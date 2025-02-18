@@ -49,7 +49,8 @@
                                    {{ $project->execution_date->format('d-m-Y') }}
                                 </td>
                                 <td class="flex items-center space-x-4 relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
-                                    <x-button-link label="Bewerken" wire:key="{{$project->id}}" wire:click="$dispatch('update-project', { project: {{ $project->id }} })" />
+                                    <x-button-link label="Bewerken" wire:key="update-{{$project->id}}" wire:click="$dispatch('update-project', { project: {{ $project->id }} })" />
+                                    <x-button-link class="!text-red-500" label="Verwijderen" wire:key="delete-{{$project->id}}" wire:click="deleteProject({{$project->id}})" wire:confirm="Weet je zeker dat je dit project wil verwijderen?" />
                                 </td>
                             </tr>
                         @endforeach

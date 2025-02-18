@@ -23,6 +23,24 @@ class Index extends Component
             ->paginate(10);
     }
 
+    public function deleteProject(Project $project)
+    {
+        if ($project->media()->exists()) {
+            foreach ($project->media as $media) {
+                $media->delete();
+            }
+        }
+        $project->delete();
+
+        $this->dispatch(
+            'open-toast',
+            title: 'Project verwijderd',
+            message: 'Het project is succesvol verwijderd.',
+            type: 'success',
+        );
+        $this->dispatch('refresh');
+    }
+
     #[On('refresh')]
     public function render()
     {

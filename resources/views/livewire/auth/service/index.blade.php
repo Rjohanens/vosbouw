@@ -49,7 +49,8 @@
                                     {{ $service->updated_at->format('d-m-Y') }}
                                 </td>
                                 <td class="flex items-center space-x-4 relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
-                                    <x-button-link label="Bewerken" wire:key="{{$service->id}}" wire:click="$dispatch('update-service', { service: {{ $service->id }} })" />
+                                    <x-button-link label="Bewerken" wire:key="update-{{$service->id}}" wire:click="$dispatch('update-service', { service: {{ $service->id }} })" />
+                                    <x-button-link class="!text-red-500" label="Verwijderen" wire:key="delete-{{$service->id}}" wire:click="deleteService({{$service->id}})" wire:confirm="Weet je zeker dat je deze dienst wil verwijderen?" />
                                 </td>
                             </tr>
                         @empty
