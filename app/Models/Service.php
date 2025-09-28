@@ -5,10 +5,10 @@ namespace App\Models;
 use App\Enum\StatusEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
-use Illuminate\Support\Str;
 
 class Service extends Model implements HasMedia
 {
@@ -44,7 +44,7 @@ class Service extends Model implements HasMedia
         return $query->published()->where('featured', true);
     }
 
-    public function getThumbnailUrl(): string | null
+    public function getThumbnailUrl(): ?string
     {
         $media = $this->media();
 
@@ -55,7 +55,7 @@ class Service extends Model implements HasMedia
         return $media->first()->getAvailableUrl(['optimized']);
     }
 
-    public function registerMediaConversions(Media $media = null): void
+    public function registerMediaConversions(?Media $media = null): void
     {
         $this->addMediaConversion('optimized')
             ->width(1024)

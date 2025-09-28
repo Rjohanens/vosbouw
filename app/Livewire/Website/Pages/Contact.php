@@ -2,16 +2,17 @@
 
 namespace App\Livewire\Website\Pages;
 
-use Livewire\Component;
-use App\Mail\ContactFormMail;
-use Livewire\Attributes\Layout;
 use App\Livewire\Forms\ContactForm;
+use App\Mail\ContactFormMail;
 use App\Models\ContactRequest;
 use Illuminate\Support\Facades\Mail;
+use Livewire\Attributes\Layout;
+use Livewire\Component;
 
 class Contact extends Component
 {
     public ContactForm $form;
+
     public bool $hasSuccessMessage = false;
 
     #[Layout('components.layouts.app')]

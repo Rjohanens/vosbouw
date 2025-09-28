@@ -17,7 +17,9 @@ class ServiceModal extends Component
     use WithFileUploads;
 
     public bool $show = false;
+
     public ServiceForm $form;
+
     public $images;
 
     #[On('create-service')]

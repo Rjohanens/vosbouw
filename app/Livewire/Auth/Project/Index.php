@@ -2,7 +2,6 @@
 
 namespace App\Livewire\Auth\Project;
 
-use App\Livewire\Auth\Project\Components\ProjectModal;
 use App\Models\Project;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Layout;

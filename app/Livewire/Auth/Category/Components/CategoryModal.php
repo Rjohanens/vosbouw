@@ -10,13 +10,15 @@ use Livewire\Component;
 class CategoryModal extends Component
 {
     public bool $show = false;
+
     public ?Category $category = null;
+
     public string $name = '';
 
     public function rules()
     {
         return [
-            'name' => ['required', 'string', 'min:1', 'max:255', 'unique:categories,name,' . ($this->category ? $this->category->id : 'null')],
+            'name' => ['required', 'string', 'min:1', 'max:255', 'unique:categories,name,'.($this->category ? $this->category->id : 'null')],
         ];
     }
 

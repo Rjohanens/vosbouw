@@ -12,7 +12,6 @@ use Livewire\Component;
 
 class Dashboard extends Component
 {
-
     #[Computed]
     public function projectCount(): int
     {

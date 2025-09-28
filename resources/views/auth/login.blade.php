@@ -8,7 +8,7 @@
 				<x-input label="Wachtwoord" name="password" type="password" required />
 
 				<div class="flex justify-end pt-6">
-					<x-button type="submit" label="Aanmelden"></x-button>
+					<x-inputs.button variant="primary" type="submit" label="Aanmelden" />
 				</div>
 			</form>
 		</div>

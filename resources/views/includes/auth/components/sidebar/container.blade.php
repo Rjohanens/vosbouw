@@ -17,6 +17,12 @@
             </ul>
           </li>
         </ul>
+        <a target="_blank" href="{{ route('home') }}" class="flex space-x-2 items-center mt-auto -mx-2 px-2 py-1.5 text-sm text-gray-700 rounded-md hover:bg-gray-50 hover:text-gray-900">
+          <span>Bekijk website</span>
+          <span>
+            @include('assets.icons.arrow-up')
+          </span>
+        </a>
       </nav>
     </div>
   </div>

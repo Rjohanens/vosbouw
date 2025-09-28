@@ -12,11 +12,11 @@ class PageView extends Model
         'url',
         'ip',
         'user_agent',
-        'viewed_at'
+        'viewed_at',
     ];
 
     protected $casts = [
-        'viewed_at' => 'datetime'
+        'viewed_at' => 'datetime',
     ];
 
     public static function track()
@@ -29,7 +29,7 @@ class PageView extends Model
             'url' => request()->path(),
             'ip' => request()->ip(),
             'user_agent' => request()->userAgent(),
-            'viewed_at' => now()
+            'viewed_at' => now(),
         ];
 
         // Check if there's an existing view within the last 24 hours
@@ -38,7 +38,7 @@ class PageView extends Model
             ->where('viewed_at', '>=', now()->subHours(24))
             ->first();
 
-        if (!$existingView) {
+        if (! $existingView) {
             try {
                 self::create($data);
             } catch (\Exception $e) {

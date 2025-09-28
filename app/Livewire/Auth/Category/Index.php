@@ -28,6 +28,7 @@ class Index extends Component
                 message: 'De categorie kan niet worden verwijderd omdat er projecten aan zijn gekoppeld. Verwijder eerst de projecten en probeer het opnieuw.',
                 type: 'error',
             );
+
             return;
         }
 

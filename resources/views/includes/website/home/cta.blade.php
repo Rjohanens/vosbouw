@@ -5,7 +5,7 @@
                 Benieuwd naar de mogelijkheden?
             </h1>
             <div class="flex space-x-2 mt-8">
-                <a href="{{ route('contact.index') }}" class="p-4 border border-white rounded-xl text-white hover:bg-primary transition duration-300 hover:border-dark">Neem contact op</a>
+                <a href="{{ route('contact.index') }}" class="p-4 border border-white rounded-md text-white hover:text-dark hover:bg-white transition duration-300 hover:border-dark">Neem contact op</a>
             </div>
         </div>
     </div>

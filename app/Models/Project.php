@@ -3,12 +3,11 @@
 namespace App\Models;
 
 use App\Enum\StatusEnum;
-use App\Models\Category;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Spatie\MediaLibrary\HasMedia;
-use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class Project extends Model implements HasMedia
@@ -43,7 +42,7 @@ class Project extends Model implements HasMedia
         return $this->belongsTo(Category::class);
     }
 
-    public function thumbnail(): Media|null
+    public function thumbnail(): ?Media
     {
         return $this->getFirstMedia();
     }
@@ -58,7 +57,7 @@ class Project extends Model implements HasMedia
         return $query->published()->where('featured', true);
     }
 
-    public function getThumbnailUrl(): string | null
+    public function getThumbnailUrl(): ?string
     {
         $media = $this->media();
 
@@ -69,7 +68,7 @@ class Project extends Model implements HasMedia
         return $media->first()->getAvailableUrl(['optimized']);
     }
 
-    public function registerMediaConversions(Media $media = null): void
+    public function registerMediaConversions(?Media $media = null): void
     {
         $this->addMediaConversion('optimized')
             ->width(1024)

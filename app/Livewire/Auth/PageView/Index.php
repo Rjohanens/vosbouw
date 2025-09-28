@@ -10,7 +10,6 @@ use Livewire\Component;
 #[Layout('components.layouts.auth')]
 class Index extends Component
 {
-
     #[Computed]
     public function homeCount()
     {

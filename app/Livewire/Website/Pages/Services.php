@@ -9,7 +9,6 @@ use Livewire\Component;
 
 class Services extends Component
 {
-
     #[Computed]
     public function services()
     {

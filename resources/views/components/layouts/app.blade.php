@@ -7,13 +7,17 @@
         <!-- icon -->
         <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/png">
 
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+
         <title>{{ $title ?? 'Vos Bouw - Bouw- en aannemersberdrijf' }}</title>
         @vite('resources/css/app.css')
     </head>
     <body class="overflow-x-hidden font-rubik scroll-smooth">
         <div>
-            <x-navbar></x-navbar>
-                {{ $slot}}
+            <div>
+                <x-navbar></x-navbar>
+            </div>
+            {{ $slot}}
             <x-footer></x-footer>
         </div>
         <livewire:toast />

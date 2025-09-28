@@ -1,4 +1,4 @@
-<article class="relative isolate group flex flex-col justify-end overflow-hidden rounded-2xl bg-zinc-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80 shadow-md">
+<article class="relative isolate group flex flex-col justify-end overflow-hidden rounded-md bg-dark px-8 pb-8 pt-80 sm:pt-48 lg:pt-80 shadow-md">
     <img src="{{ $project->getThumbnailUrl() }}" alt="{{ $project->title }}" class="absolute inset-0 -z-10 h-full w-full object-cover group-hover:scale-105 transition duration-300">
     <div class="absolute inset-0 -z-10 bg-gradient-to-t from-zinc-900/70 via-zinc-900/30"></div>
     <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-zinc-900/10"></div>

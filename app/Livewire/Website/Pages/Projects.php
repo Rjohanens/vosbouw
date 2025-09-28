@@ -2,12 +2,12 @@
 
 namespace App\Livewire\Website\Pages;
 
-use App\Models\Project;
-use Livewire\Component;
 use App\Models\Category;
+use App\Models\Project;
 use Illuminate\Support\Str;
-use Livewire\Attributes\Layout;
 use Livewire\Attributes\Computed;
+use Livewire\Attributes\Layout;
+use Livewire\Component;
 use Livewire\WithPagination;
 
 class Projects extends Component
@@ -31,7 +31,7 @@ class Projects extends Component
     {
         return Project::with('category')
             ->published()
-            ->when($this->filter, fn($query) => $query->whereRelation('category', 'name', $this->filter))
+            ->when($this->filter, fn ($query) => $query->whereRelation('category', 'name', $this->filter))
             ->paginate(9);
     }
 

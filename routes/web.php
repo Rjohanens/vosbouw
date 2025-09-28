@@ -1,18 +1,18 @@
 <?php
 
-use App\Livewire\Auth\Dashboard;
-use App\Livewire\Website\Pages\Home;
-use Illuminate\Support\Facades\Route;
-use App\Livewire\Website\Pages\Projects;
-use App\Livewire\Website\Pages\Services;
-use App\Livewire\Website\Pages\ProjectShow;
-use App\Livewire\Website\Pages\ServiceShow;
-use App\Livewire\Website\Pages\Contact;
 use App\Http\Controllers\Auth\AuthController;
+use App\Livewire\Auth\Category\Index as CategoryIndex;
+use App\Livewire\Auth\Dashboard;
 use App\Livewire\Auth\PageView\Index;
 use App\Livewire\Auth\Project\Index as ProjectIndex;
 use App\Livewire\Auth\Service\Index as ServiceIndex;
-use App\Livewire\Auth\Category\Index as CategoryIndex;
+use App\Livewire\Website\Pages\Contact;
+use App\Livewire\Website\Pages\Home;
+use App\Livewire\Website\Pages\Projects;
+use App\Livewire\Website\Pages\ProjectShow;
+use App\Livewire\Website\Pages\Services;
+use App\Livewire\Website\Pages\ServiceShow;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', Home::class)->name('home');
 Route::get('/diensten', Services::class)->name('services');

@@ -1,28 +1,20 @@
-<div class="flex lg:h-screen bg-secondary pb-16 lg:pb-0 px-8 lg:px-0">
-    <div class="flex w-full lg:w-1/2 mt-32 lg:mt-52">
-        <div class="flex flex-col w-full max-w-2xl lg:pl-24">
-            <h1 class="text-pretty text-4xl lg:text-6xl leading-12 font-medium tracking-tight text-zinc-900 animate-fade-in-up animate-delay-100">
-                Uw <span class="text-primary">bouwpartner</span> in de regio
-            </h1>
-            <p class="text-base text-pretty leading-7 text-zinc-500 font-light mt-8 animate-fade-in animate-delay-500">
-                Vos Bouw B.V. is een bouw- en aannemersbedrijf dat zich richt op nieuwbouw, verbouw, renovatie en onderhoud van woningen en bedrijfspanden.
-            </p>
-            <div class="flex space-x-4 items-center mt-8 animate-fade-in animate-delay-700">
-                <a href="{{ route('contact.index') }}" class="btn btn-brand">Neem contact op</a>
-                <a href="{{ route('service.index') }}" class="btn btn-ghost flex items-center space-x-2">
-                    <span>Bekijk diensten</span>
-                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
-                </a>
-            </div>
+ <div class="relative isolate overflow-hidden pt-14">
+    <div class="mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
+        <h1 class="max-w-2xl text-balance text-5xl font-medium tracking-tight text-dark sm:text-7xl lg:col-span-2 xl:col-auto dark:text-white">
+            Uw bouwpartner in de regio.
+        </h1>
+        <div class="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
+          <p class="text-pretty text-base font-light text-dark/70 sm:text-xl/8 dark:text-zinc-400">
+            Bij Vos Bouw staan kwaliteit, betrouwbaarheid en klanttevredenheid centraal. Met jarenlange ervaring in de bouwsector realiseren wij uw droomproject van begin tot eind.
+          </p>
+          <div class="mt-10 flex items-center gap-x-4 lg:gap-x-6">
+            <x-inputs.button variant="primary" label="Neem contact op" href="{{ route('contact.index') }}" />
+            <x-inputs.button variant="outline" label="Diensten →" href="#contact" class="!border-zinc-500 hover:!bg-dark !text-dark hover:!text-white" />
+          </div>
         </div>
+        <img src="{{ asset('images/hero.jpg')}}" alt="" class="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover outline outline-1 -outline-offset-1 outline-black/5 sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36 dark:outline-white/10" />
+      </div>
     </div>
-    <div class="hidden lg:flex flex-col justify-center items-center h-full w-1/2 -mt-24">
-        <div class="flex justify-center items-center max-w-xl mt-24 animate-fade-in-down rounded-xl shadow-xl">
-            <img 
-                src="{{ asset('images/hero.jpg') }}" 
-                alt="Vos Bouw B.V." 
-                class="object-cover w-full h-full rounded-xl z-10 bg-transparent"
-            />
-        </div>
-    </div>
-</div>
+    <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32 dark:from-gray-900"></div>
+  </div>

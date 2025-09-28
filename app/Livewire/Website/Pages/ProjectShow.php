@@ -3,8 +3,8 @@
 namespace App\Livewire\Website\Pages;
 
 use App\Models\Project;
-use Livewire\Component;
 use Livewire\Attributes\Locked;
+use Livewire\Component;
 
 class ProjectShow extends Component
 {

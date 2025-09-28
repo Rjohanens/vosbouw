@@ -7,7 +7,6 @@ use App\Models\Category;
 use App\Models\Project;
 use Carbon\Carbon;
 use Illuminate\Validation\Rules\Enum;
-use Livewire\Features\SupportFileUploads\WithFileUploads;
 use Livewire\Form;
 
 class ProjectForm extends Form
@@ -15,16 +14,21 @@ class ProjectForm extends Form
     public ?Project $project = null;
 
     public string $title = '';
+
     public string $description = '';
+
     public string $execution_date = '';
+
     public bool $featured = false;
+
     public ?Category $category = null;
+
     public StatusEnum $status = StatusEnum::DRAFT;
 
     public function rules()
     {
         return [
-            'title' => 'required|string|min:1|max:255|unique:projects,title,' . ($this->project ? $this->project->id : 'null'),
+            'title' => 'required|string|min:1|max:255|unique:projects,title,'.($this->project ? $this->project->id : 'null'),
             'description' => 'required|string|min:1|max:4096',
             'execution_date' => 'required|date',
             'category' => ['required'],

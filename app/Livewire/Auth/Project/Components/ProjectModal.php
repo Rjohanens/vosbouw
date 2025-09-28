@@ -18,7 +18,9 @@ class ProjectModal extends Component
     use WithFileUploads;
 
     public bool $show = false;
+
     public ProjectForm $form;
+
     public $images;
 
     public function mount()

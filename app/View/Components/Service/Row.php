@@ -9,6 +9,7 @@ use Illuminate\View\Component;
 class Row extends Component
 {
     public bool $active;
+
     /**
      * Create a new component instance.
      */

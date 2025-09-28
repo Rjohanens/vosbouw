@@ -54,7 +54,7 @@
             </div>
             <div class="flex justify-end space-x-2 sticky -bottom-4 bg-white p-4">
                 <x-button-link label="Annuleren" wire:click="close"></x-button-link>
-                <x-button wire:click="save" label="Opslaan"></x-button>
+                <x-inputs.button variant="primary" wire:click="save" label="Opslaan" />
             </div>
         </div>
     </div>

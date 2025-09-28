@@ -10,8 +10,11 @@ use Livewire\Form;
 class ServiceForm extends Form
 {
     public ?Service $service = null;
+
     public string $name = '';
+
     public string $description = '';
+
     public bool $featured = false;
 
     public StatusEnum $status = StatusEnum::DRAFT;
@@ -19,7 +22,7 @@ class ServiceForm extends Form
     public function rules()
     {
         return [
-            'name' => 'required|string|min:1|max:255|unique:services,name,' . ($this->service ? $this->service->id : 'null'),
+            'name' => 'required|string|min:1|max:255|unique:services,name,'.($this->service ? $this->service->id : 'null'),
             'description' => 'required|string|min:1|max:4096',
             'status' => ['required', new Enum(StatusEnum::class)],
             'featured' => 'required|boolean',
@@ -49,7 +52,7 @@ class ServiceForm extends Form
 
     public function update()
     {
-        if (!$this->service) {
+        if (! $this->service) {
             return;
         }
 

@@ -8,8 +8,11 @@ use Livewire\Component;
 class Toast extends Component
 {
     public bool $show = false;
+
     public string $title = '';
+
     public string $message = '';
+
     public string $type = '';
 
     #[On('open-toast')]
