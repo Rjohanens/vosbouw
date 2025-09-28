@@ -86,7 +86,7 @@
             <span class="text-zinc-500 font-light text-sm">Door dit formulier te gebruiken gaat u akkoord met de opslag en verwerking van uw gegevens door deze website.</span>
           </div>
           <div class="mt-8 flex justify-end">
-            <button wire:click="store" type="button" class="btn btn-brand">Versturen</button>
+            <x-inputs.button wire:click="store" type="button" variant="primary" label="Versturen" />
           </div>
         </div>
     </div>
