@@ -25,7 +25,7 @@ class Contact extends Component
     {
         $validated = $this->form->validate();
 
-        Mail::to('vos.dienstverlening@outlook.com')
+        Mail::to('vos.bouw@outlook.com')
             ->send(
                 new ContactFormMail(
                     $validated['firstName'],
