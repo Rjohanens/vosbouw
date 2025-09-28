@@ -3,10 +3,10 @@
     <div class="flex lg:flex-1">
       <a href="{{ route('home') }}" class="-m-1.5 p-1.5">
         <div class="flex items-center space-x-2.5">
-          <span class="sr-only">Vosbouw</span>
+          <span class="sr-only">Vos Bouw</span>
           <img src="{{ asset('images/logo.png')}}" alt="" class="h-8 w-auto" />
           <div class="flex flex-col">
-            <span class="text-white">Vosbouw</span>
+            <span class="text-white">Vos Bouw</span>
             <span class="text-xs text-white -mt-1">Bouw- en aannemersbedrijf</span>
           </div>
         </div>
@@ -37,10 +37,10 @@
             <div class="flex items-center justify-between">
               <a href="{{ route('home') }}" class="-m-1.5 p-1.5">
                 <div class="flex items-center space-x-2.5">
-                  <span class="sr-only">Vosbouw</span>
+                  <span class="sr-only">Vos Bouw</span>
                   <img src="{{ asset('images/logo.png')}}" alt="" class="h-8 w-auto" />
                   <div class="flex flex-col">
-                    <span class="text-dark">Vosbouw</span>
+                    <span class="text-dark">Vos Bouw</span>
                     <span class="text-xs text-dark -mt-1">Bouw- en aannemersbedrijf</span>
                   </div>
                 </div>
