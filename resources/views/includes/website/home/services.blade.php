@@ -1,18 +1,18 @@
 <div class="grid grid-cols-1 md:grid-cols-2 sm:row-start-1 gap-x-16 px-8 md:px-16 lg:px-24 py-16 md:py-32 bg-secondary">
     <div class="flex flex-col space-y-4 mt-8 md:mt-0">
         <div class="flex space-x-4">
-            <div class="w-52 h-64 rounded-md bg-dark">
+            <div class="w-64 md:w-52 h-64 rounded-md bg-dark">
                 <img src="{{ asset('images/service_1.jpg')}}" alt="" class="w-full h-full object-cover rounded-md" />
             </div>
-            <div class="w-72 h-64 aspect-square rounded-md bg-dark">
+            <div class="w-64 md:w-72 h-64 aspect-square rounded-md bg-dark">
                 <img src="{{ asset('images/service_2.jpg')}}" alt="" class="w-full h-full object-cover rounded-md" />
             </div>
         </div>
         <div class="flex space-x-4">
-            <div class="w-72 h-64 rounded-md bg-dark">
+            <div class="w-64 md:w-72 h-64 rounded-md bg-dark">
                 <img src="{{ asset('images/hero.jpg')}}" alt="" class="w-full h-full object-cover rounded-md" />
             </div>
-            <div class="w-52 h-64 aspect-square rounded-md bg-dark">
+            <div class="w-64 md:w-52 h-64 aspect-square rounded-md bg-dark">
                 <img src="{{ asset('images/service_3.jpg')}}" alt="" class="w-full h-full object-cover rounded-md" />
             </div>
         </div>
