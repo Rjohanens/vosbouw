@@ -36,28 +36,6 @@ class Contact extends Component
                 )
             );
 
-          Mail::to('r.joty123@gmail.com')
-            ->send(
-                new ContactFormMail(
-                    $validated['firstName'],
-                    $validated['lastName'],
-                    $validated['email'],
-                    $validated['phone'],
-                    $validated['message'],
-                )
-            );
-
-        Mail::to('rickjohannes@hotmail.nl')
-            ->send(
-                new ContactFormMail(
-                    $validated['firstName'],
-                    $validated['lastName'],
-                    $validated['email'],
-                    $validated['phone'],
-                    $validated['message'],
-                )
-            );
-
         ContactRequest::create([
             'first_name' => $validated['firstName'],
             'last_name' => $validated['lastName'],
