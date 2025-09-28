@@ -31,9 +31,8 @@ class Projects extends Component
     {
         return Project::with('category')
             ->published()
-            ->inRandomOrder()
             ->when($this->filter, fn ($query) => $query->whereRelation('category', 'name', $this->filter))
-            ->take(4);
+            ->paginate(9);
     }
 
     #[Computed]

@@ -19,7 +19,7 @@ class Home extends Component
     #[Computed]
     public function projects()
     {
-        return Project::featured()->with('category')->limit(6)->get();
+        return Project::featured()->with('category')->inRandomOrder()->limit(4)->get();
     }
 
     #[Computed]
