@@ -3,6 +3,7 @@
 namespace App\Livewire\Website\Pages;
 
 use App\Livewire\Forms\ContactForm;
+use App\Mail\ContactConfirmationMail;
 use App\Mail\ContactFormMail;
 use App\Models\ContactRequest;
 use Illuminate\Support\Facades\Mail;
@@ -25,14 +26,22 @@ class Contact extends Component
     {
         $validated = $this->form->validate();
 
-         Mail::to('vos.bouw@outlook.com')
+        //  Mail::to('vos.bouw@outlook.com')
+        //     ->send(
+        //         new ContactFormMail(
+        //             $validated['firstName'],
+        //             $validated['lastName'],
+        //             $validated['email'],
+        //             $validated['phone'],
+        //             $validated['message'],
+        //         )
+        //     );
+
+        Mail::to($validated['email'])
             ->send(
-                new ContactFormMail(
+                new ContactConfirmationMail(
                     $validated['firstName'],
                     $validated['lastName'],
-                    $validated['email'],
-                    $validated['phone'],
-                    $validated['message'],
                 )
             );
 
