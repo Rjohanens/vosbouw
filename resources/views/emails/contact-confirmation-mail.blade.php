@@ -17,7 +17,7 @@ Nieuweweg 92
 +31(0) 6 203 213 30
 
 **E-mail:**  
-info@vosbouwnoord.nl
+info@mail.vosbouwnoord.nl
 
 **Website:**  
 [www.vosbouwnoord.nl](https://www.vosbouwnoord.nl)

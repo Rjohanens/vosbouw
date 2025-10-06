@@ -26,6 +26,14 @@ class Contact extends Component
     {
         $validated = $this->form->validate();
 
+        ContactRequest::create([
+            'first_name' => $validated['firstName'],
+            'last_name' => $validated['lastName'],
+            'email' => $validated['email'],
+            'phone' => $validated['phone'],
+            'message' => $validated['message'],
+        ]);
+
          Mail::to('vos.bouw@outlook.com')
             ->send(
                 new ContactFormMail(
@@ -45,13 +53,7 @@ class Contact extends Component
                 )
             );
 
-        ContactRequest::create([
-            'first_name' => $validated['firstName'],
-            'last_name' => $validated['lastName'],
-            'email' => $validated['email'],
-            'phone' => $validated['phone'],
-            'message' => $validated['message'],
-        ]);
+      
 
         $this->dispatch(
             'open-toast',
