@@ -1,56 +1,21 @@
-<div class="grid grid-cols-1 md:grid-cols-2 sm:row-start-1 gap-x-16 px-8 md:px-16 lg:px-24 py-16 md:py-32 bg-secondary">
-    <div class="hidden md:flex flex-col space-y-4">
-        <div class="flex space-x-4">
-            <div class="w-52 h-64 rounded-md bg-dark">
-                <img src="{{ asset('images/service_1.jpg')}}" alt="" class="w-full h-full object-cover rounded-md" />
-            </div>
-            <div class="w-72 h-64 aspect-square rounded-md bg-dark">
-                <img src="{{ asset('images/service_2.jpg')}}" alt="" class="w-full h-full object-cover rounded-md" />
-            </div>
-        </div>
-        <div class="flex space-x-4">
-            <div class="w-72 h-64 rounded-md bg-dark">
-                <img src="{{ asset('images/hero.jpg')}}" alt="" class="w-full h-full object-cover rounded-md" />
-            </div>
-            <div class="w-52 h-64 aspect-square rounded-md bg-dark">
-                <img src="{{ asset('images/service_3.jpg')}}" alt="" class="w-full h-full object-cover rounded-md" />
-            </div>
-        </div>
+<div class="grid grid-cols-1 md:grid-cols-2 px-8 md:px-16 lg:px-32 py-24 md:py-48 bg-foreground">
+    <div>
+        <h1 class="text-background w-full md:max-w-xl text-3xl font-normal md:tracking-tight text-dark sm:text-5xl lg:col-span-2 xl:col-auto dark:text-white">
+            Waar wij goed in zijn.
+        </h1>
+        <p class="text-background/80 font-light text-sm/6 mt-4 mb-12 max-w-lg">
+            Bij Vos Bouw bieden we een breed scala aan bouwdiensten om aan al uw behoeften te voldoen.
+            Staat uw gewenste dienst er niet bij? Neem gerust contact met ons op, we denken graag met u mee!
+        </p>
+        <x-inputs.button variant="primary" label="Bekijk alle diensten" href="{{ route('service.index') }}" />
     </div>
-    <div class="md:hidden grid grid-cols-2 gap-2 mt-8">
-        <img src="{{ asset('images/service_1.jpg')}}" alt="" class="w-full h-full object-cover rounded-md" />
-        <img src="{{ asset('images/service_2.jpg')}}" alt="" class="w-full h-full object-cover rounded-md" />
-        <img src="{{ asset('images/hero.jpg')}}" alt="" class="w-full h-full object-cover rounded-md" />
-        <img src="{{ asset('images/service_3.jpg')}}" alt="" class="w-full h-full object-cover rounded-md" />
-    </div>
-    <div class="order-first md:order-last">
-        <div class="h-2 w-24 bg-dark mb-4 rounded"></div>
-        <div class="hidden md:flex justify-between items-end w-full">
-            <h1 class="text-4xl font-medium text-dark">
-                Waar wij goed in zijn.
-            </h1>
-            <x-inputs.button variant="outline" label="Alle diensten →" href="{{ route('service.index') }}" class="!border-dark hover:!bg-dark !text-dark hover:!text-white" />
-        </div>
-        <div class="md:hidden flex flex-col space-y-4">
-              <h1 class="text-4xl font-medium text-dark">
-                Waar wij goed in zijn.
-            </h1>
-            <x-inputs.button variant="outline" label="Alle diensten →" href="{{ route('service.index') }}" class="!border-dark hover:!bg-dark !text-dark hover:!text-white" /> 
-        </div>
-        <div class="grid grid-cols-2 gap-8 mt-16">
-            @foreach($this->services->take(4) as $service)
-                 <div class="flex flex-col space-y-2 mb-4">
-                    <h2 class="text-xl font-medium text-dark capitalize">
-                        {{ $service->name }}
-                    </h2>
-                    <p class="text-gray-700 font-light leading-6 line-clamp-3">
-                        {{ $service->description }}
-                    </p>
-                    <a href="{{ route('service.show', $service) }}" class="text-zinc-900 font-normal hover:underline">
-                        Lees meer &rarr;
-                    </a>
-                </div>
-            @endforeach
-        </div>
+    <div class="grid grid-cols-2 gap-x-16 gap-y-24">
+        @foreach($this->services as $service)
+            <div>
+                <h2 class="text-background text-xl">{{ $service->name }}</h2>
+                <p class="font-light text-background/80 text-sm/6 mt-2 line-clamp-3">{{ $service->description }}</p>
+                <x-inputs.button variant="link" label="Lees meer" href="{{ route('service.show', $service) }}" class="mt-4" />
+            </div>
+        @endforeach
     </div>
 </div>

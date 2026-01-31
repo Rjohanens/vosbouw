@@ -15,7 +15,8 @@
     <body class="overflow-x-hidden font-rubik scroll-smooth">
         <div>
             <div>
-                <x-navbar></x-navbar>
+                <x-navigation></x-navigation>
+                {{-- <x-navbar></x-navbar> --}}
             </div>
             {{ $slot}}
             <x-footer></x-footer>

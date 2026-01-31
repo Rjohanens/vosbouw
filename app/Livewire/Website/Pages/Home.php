@@ -13,13 +13,13 @@ class Home extends Component
     #[Computed]
     public function projects()
     {
-        return Project::featured()->with('category')->inRandomOrder()->limit(4)->get();
+        return Project::featured()->with('category')->inRandomOrder()->limit(6)->get();
     }
 
     #[Computed]
     public function services()
     {
-        return Service::featured()->limit(6)->get();
+        return Service::featured()->limit(4)->get();
     }
 
     #[Layout('components.layouts.app')]

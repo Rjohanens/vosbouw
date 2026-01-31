@@ -1,13 +1,13 @@
-<header class="fixed z-50 bg-dark w-full">
+<header class="fixed z-50 bg-navbar w-full">
   <nav aria-label="Global" class="flex w-full items-center justify-between px-6 py-4 lg:px-8">
     <div class="flex lg:flex-1">
       <a href="{{ route('home') }}" class="-m-1.5 p-1.5">
-        <div class="flex items-center space-x-2.5">
+        <div class="flex items-center space-x-4">
           <span class="sr-only">Vos Bouw</span>
           <img src="{{ asset('images/logo.png')}}" alt="" class="h-8 w-auto" />
           <div class="flex flex-col">
-            <span class="text-white">Vos Bouw</span>
-            <span class="text-xs text-white -mt-1">Bouw- en aannemersbedrijf</span>
+            <span class="text-navbar-foreground">Vos Bouw</span>
+            <span class="text-xs text-navbar-foreground">Bouw- en aannemersbedrijf</span>
           </div>
         </div>
       </a>
@@ -20,10 +20,10 @@
         </svg>
       </button>
     </div>
-    <el-popover-group class="hidden lg:flex lg:gap-x-12">
-      <a href="{{ route('project.index') }}" class="text-sm/6 font-medium text-white hover:text-primary dark:text-white">Projecten</a>
-      <a href="{{ route('service.index') }}" class="text-sm/6 font-medium text-white hover:text-primary dark:text-white">Diensten</a>
-      <a href="{{ route('contact.index') }}" class="text-sm/6 font-medium text-white hover:text-primary dark:text-white">Contact</a>
+    <el-popover-group class="hidden lg:flex lg:gap-x-4">
+      <a href="{{ route('project.index') }}" class="px-4 py-3 bg-navbar hover:bg-navbar-muted text-sm/6 font-normal text-navbar-foreground rounded-md">Projecten</a>
+      <a href="{{ route('service.index') }}" class="px-4 py-3 bg-navbar hover:bg-navbar-muted text-sm/6 font-normal text-navbar-foreground rounded-md">Diensten</a>
+      <a href="{{ route('contact.index') }}" class="px-4 py-3 bg-navbar hover:bg-navbar-muted text-sm/6 font-normal text-navbar-foreground rounded-md">Contact</a>
     </el-popover-group>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
       <x-inputs.button variant="primary" label="Offerte aanvragen" />
