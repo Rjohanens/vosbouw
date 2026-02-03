@@ -8,7 +8,7 @@
           <p class="text-muted-foreground text-pretty text-lg font-light text-dark/70 sm:text-xl/8">
             Bij Vos Bouw staan kwaliteit, betrouwbaarheid en klanttevredenheid centraal. Met jarenlange ervaring in de bouwsector realiseren wij uw droomproject van begin tot eind.
           </p>
-          <div class="mt-8 lg:mt-12 grid grid-cols-2 md:flex items-center lg:gap-x-4">
+          <div class="mt-8 lg:mt-12 flex items-center gap-x-2 lg:gap-x-4">
             <x-inputs.button variant="primary" label="Neem contact op" href="{{ route('contact.index') }}" />
             <x-inputs.button variant="outline" label="Diensten" href="{{ route('service.index') }}" />
           </div>
