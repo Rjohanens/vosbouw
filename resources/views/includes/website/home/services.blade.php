@@ -9,7 +9,7 @@
         </p>
         <x-inputs.button variant="primary" label="Bekijk alle diensten" href="{{ route('service.index') }}" />
     </div>
-    <div class="grid grid-cols-2 gap-x-16 gap-y-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 md:gap-y-24 mt-16 md:mt-0">
         @foreach($this->services as $service)
             <div>
                 <h2 class="text-background text-xl">{{ $service->name }}</h2>
