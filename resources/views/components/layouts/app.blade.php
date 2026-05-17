@@ -12,12 +12,14 @@
         <title>{{ $title ?? 'Vos Bouw - Bouw- en aannemersberdrijf' }}</title>
         @vite('resources/css/app.css')
     </head>
-    <body class="overflow-x-hidden font-rubik scroll-smooth">
-        <div>
+    <body class="overflow-x-hidden font-rubik scroll-smooth antialiased">
+        <div class="w-full relative">
             <div>
-                <x-navbar></x-navbar>
+                <x-navigation></x-navigation>
             </div>
+            <div>
             {{ $slot}}
+            </div>
             <x-footer></x-footer>
         </div>
         <livewire:toast />

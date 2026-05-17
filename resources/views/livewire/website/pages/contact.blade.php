@@ -2,7 +2,10 @@
     <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
       <div class="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
         <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <h1 class="lg:text-5xl text-zinc-900 font-medium">Neem vrijblijvend contact op</h1>
+          <div class="h-2 w-24 bg-dark mb-4 rounded"></div>
+            <h1 class="text-4xl font-medium text-dark">
+                Neem vrijblijvend contact op
+            </h1>
             <p class="mt-6 text-lg/8 text-zinc-600 font-light">
                 Heeft u vragen of wilt u een offerte aanvragen? Neem dan contact met ons op via het formulier. Wij nemen zo spoedig mogelijk contact met u op.
             </p>

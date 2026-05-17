@@ -7,13 +7,14 @@
 ])
 
 @php
-    $classes = match($variant) {
-        'primary' => 'rounded bg-primary px-6 py-3 text-sm font-normal text-white shadow-sm hover:bg-primary/80 transition-colors duration-30 whitespace-nowrap',
-        'secondary' => 'rounded bg-secondary px-6 py-3 text-sm font-normal text-white shadow-sm hover:bg-secondary/80 transition-colors duration-30 whitespace-nowrap',
-        'outline' => 'rounded bg-transparent px-6 py-3 text-sm font-normal text-white border border-white/80 hover:bg-white hover:text-dark transition-colors duration-300 whitespace-nowrap',
-        'ghost' => 'rounded bg-transparent px-6 py-3 text-sm font-normal text-dark hover:bg-gray-100 transition-colors duration-300 whitespace-nowrap',
-        default => 'rounded bg-primary px-6 py-3 text-sm font-normal text-white shadow-sm hover:bg-primary/80 transition-colors duration-30 whitespace-nowrap',
-    };    
+    $baseClasses = 'flex w-fit px-6 py-3 text-sm font-normal hover:shadow-md transition-colors duration-300 whitespace-nowrap';
+    $classes = $baseClasses . ' ' . match($variant) {
+        'primary' => 'bg-primary hover:bg-primary-foreground text-muted',
+        'outline' => 'bg-background hover:bg-foreground text-foreground hover:text-muted border border-border hover:border-foreground',
+        'ghost' => 'bg-navbar text-navbar-foreground text-dark hover:text-foreground hover:bg-gray-100',
+        'link' => 'bg-transparent !px-0 text-muted hover:underline hover:text-muted/80',
+        default => 'bg-primary text-white hover:bg-primary/80',
+    };
 @endphp
 
 @if($href)

@@ -8,28 +8,23 @@ x-cloak {
 @tailwind components;
 @tailwind utilities;
 
-body {
-    font-family: "Poppins", sans-serif;
-}
-
-.btn-brand {
-    background-color: #fc7d14;
-    color: #fff;
-}
-
-.btn-dark {
-    background-color: #0f0f10;
-    color: #fff;
-}
-
-.btn-dark:hover {
-    background-color: #1a1a1b;
-}
-
-.btn-brand:hover {
-    background-color: #f96e0b;
-}
-
-.btn {
-    box-shadow: none;
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 5%;
+        --muted: 0 0% 95%;
+        --muted-foreground: 0 0% 30%;
+        --primary: 24 80% 50%;
+        --primary-foreground: 24 80% 60%;
+        --border: 0 0% 70%;
+        --accent: 0 0% 96%;
+        --accent-foreground: 0 0% 9%;
+        --navbar: 0 0% 5%; 
+        --navbar-muted: 0 0% 20%; 
+        --navbar-foreground: 0 0% 90%;
+    }
+    
+    body {
+        font-family: "Rubik", sans-serif;
+    }
 }
