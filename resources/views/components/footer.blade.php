@@ -1,5 +1,5 @@
 <div class="flex flex-col w-full bg-foreground items-center">
-    <div class="w-full px-6 py-24  lg:py-24 grid grid-cols-1 lg:grid-cols-4 gap-y-12 gap-x-8 lg:gap-x-16 xl:gap-x-32 max-w-7xl">
+    <div class="w-full px-6 py-24 lg:py-24 grid grid-cols-1 lg:grid-cols-4 gap-y-12 gap-x-8 lg:gap-x-32 xl:gap-x-32 max-w-7xl">
         <div class="lg:col-span-2">
             <h1 class="text-3xl text-background font-light">
                 Klaar om uw project te realiseren?

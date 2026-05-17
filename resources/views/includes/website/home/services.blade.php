@@ -14,7 +14,7 @@
             <div>
                 <h2 class="text-background text-xl">{{ $service->name }}</h2>
                 <p class="font-light text-background/80 text-sm/6 mt-2 line-clamp-4">{{ $service->description }}</p>
-                <x-inputs.button variant="link" label="Lees meer" href="{{ route('service.show', $service) }}" class="mt-4" />
+                <x-inputs.button variant="link" label="Lees meer" href="{{ route('service.show', $service) }}" class="mt-4 underline" />
             </div>
         @endforeach
     </div>
