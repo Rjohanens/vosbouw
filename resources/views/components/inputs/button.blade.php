@@ -7,12 +7,12 @@
 ])
 
 @php
-    $baseClasses = 'flex w-fit px-6 py-3 text-sm font-normal rounded-md hover:shadow-md transition-colors duration-300 whitespace-nowrap';
+    $baseClasses = 'flex w-fit px-6 py-3 text-sm font-normal hover:shadow-md transition-colors duration-300 whitespace-nowrap';
     $classes = $baseClasses . ' ' . match($variant) {
         'primary' => 'bg-primary hover:bg-primary-foreground text-muted',
         'outline' => 'bg-background hover:bg-foreground text-foreground hover:text-muted border border-border hover:border-foreground',
         'ghost' => 'bg-navbar text-navbar-foreground text-dark hover:text-foreground hover:bg-gray-100',
-        'link' => 'bg-transparent !px-0 text-muted hover:underline',
+        'link' => 'bg-transparent !px-0 text-muted hover:underline hover:text-muted/80',
         default => 'bg-primary text-white hover:bg-primary/80',
     };
 @endphp
